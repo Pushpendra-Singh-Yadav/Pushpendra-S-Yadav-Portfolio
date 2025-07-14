@@ -1,192 +1,1267 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pushpendra Singh Yadav's professional portfolio showcasing web development projects, skills, and contact information.">
-    <meta name="author" content="Pushpendra Singh Yadav">
-    <title>Pushpendra Singh Yadav - Professional Portfolio</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="https://via.placeholder.com/64" type="image/png">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome -->
+    <title>Pushpendra Singh Yadav | Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <!-- Animation Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- AOS Animation Library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
-    <!-- Typed.js -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-    <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="master.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
-
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#home" class="navbar-brand">Pushpendra Singh Yadav</a>
-            <ul class="nav-links">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+    <!-- Advanced Preloader -->
+    <div class="preloader">
+        <div class="preloader-container">
+            <div class="preloader-logo">
+                <span class="logo-letter">P</span>
+                <span class="logo-letter">S</span>
+                <span class="logo-letter">Y</span>
+                <span class="logo-dot">.</span>
+            </div>
+            <div class="preloader-progress">
+                <div class="progress-bar"></div>
+                <div class="progress-text">0%</div>
+            </div>
+            <div class="preloader-message">Initializing Portfolio Experience</div>
+            <div class="preloader-animation">
+                <div class="animation-circle circle-1"></div>
+                <div class="animation-circle circle-2"></div>
+                <div class="animation-circle circle-3"></div>
+                <div class="animation-circle circle-4"></div>
+            </div>
         </div>
-    </nav>
+    </div>
+
+<!-- Glass Morphism Navigation -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header-content">
+            <!-- Logo with Animation -->
+            <a href="#home" class="logo" data-aos="fade-right" data-aos-delay="100">
+                <span class="logo-text">PSY</span>
+                <span class="logo-dot">.</span>
+                <span class="logo-highlight"></span>
+            </a>
+            
+            <!-- Main Navigation -->
+            <nav class="navbar" data-aos="fade-down" data-aos-delay="200">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">
+                            <span class="link-icon"><i class="fas fa-home"></i></span>
+                            <span class="link-text">Home</span>
+                            <span class="link-hover"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <span class="link-icon"><i class="fas fa-user"></i></span>
+                            <span class="link-text">About</span>
+                            <span class="link-hover"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#education" class="nav-link">
+                            <span class="link-icon"><i class="fas fa-graduation-cap"></i></span>
+                            <span class="link-text">Education</span>
+                            <span class="link-hover"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">
+                            <span class="link-icon"><i class="fas fa-code"></i></span>
+                            <span class="link-text">Skills</span>
+                            <span class="link-hover"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">
+                            <span class="link-icon"><i class="fas fa-briefcase"></i></span>
+                            <span class="link-text">Projects</span>
+                            <span class="link-hover"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#certificates" class="nav-link">
+                            <span class="link-icon"><i class="fas fa-certificate"></i></span>
+                            <span class="link-text">Certificates</span>
+                            <span class="link-hover"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">
+                            <span class="link-icon"><i class="fas fa-envelope"></i></span>
+                            <span class="link-text">Contact</span>
+                            <span class="link-hover"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="menu-toggle" data-aos="fade-left" data-aos-delay="400">
+                <div class="hamburger">
+                    <span class="hamburger-line line-1"></span>
+                    <span class="hamburger-line line-2"></span>
+                    <span class="hamburger-line line-3"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-content">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item">
+                    <a href="#home" class="mobile-nav-link active">
+                        <span class="mobile-link-icon"><i class="fas fa-home"></i></span>
+                        <span class="mobile-link-text">Home</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#about" class="mobile-nav-link">
+                        <span class="mobile-link-icon"><i class="fas fa-user"></i></span>
+                        <span class="mobile-link-text">About</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#education" class="mobile-nav-link">
+                        <span class="mobile-link-icon"><i class="fas fa-graduation-cap"></i></span>
+                        <span class="mobile-link-text">Education</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#skills" class="mobile-nav-link">
+                        <span class="mobile-link-icon"><i class="fas fa-code"></i></span>
+                        <span class="mobile-link-text">Skills</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#projects" class="mobile-nav-link">
+                        <span class="mobile-link-icon"><i class="fas fa-briefcase"></i></span>
+                        <span class="mobile-link-text">Projects</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#certificates" class="mobile-nav-link">
+                        <span class="mobile-link-icon"><i class="fas fa-certificate"></i></span>
+                        <span class="mobile-link-text">Certificates</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#contact" class="mobile-nav-link">
+                        <span class="mobile-link-icon"><i class="fas fa-envelope"></i></span>
+                        <span class="mobile-link-text">Contact</span>
+                    </a>
+                </li>
+            </ul>               
+            <div class="mobile-social-links">
+                <a href="www.linkedin.com/in/pushpendra-s-yadav" class="mobile-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Pushpendra-Singh-Yadav" class="mobile-social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+</header>
 
     <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="container">
-            <h1 data-aos="fade-up">
-                Hi, I'm <span>Pushpendra Singh Yadav</span>
+<section id="home" class="hero">
+    <!-- Animated Background Elements -->
+    <div class="hero-bg-elements">
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        <div class="bg-circle circle-3"></div>
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2"></div>
+    </div>
+    
+    <div class="container grid">
+        <!-- Hero Content -->
+        <div class="hero-content" data-aos="fade-right" data-aos-delay="100">
+            <h4 class="subtitle animate__animated animate__fadeInUp" data-aos-delay="200">
+                <span class="greeting-text">Hello, I'm</span>
+                <span class="greeting-emoji">👋</span>
+            </h4>
+            
+            <h1 class="title animate__animated animate__fadeInUp" data-aos-delay="300">
+                <span class="title-name">Pushpendra</span>
+                <span class="title-highlight">Singh Yadav</span>
             </h1>
-            <p data-aos="fade-up" data-aos-delay="200">
-                <span class="typed-text"></span>
+            
+            <div class="typewriter-container animate__animated animate__fadeInUp" data-aos-delay="400">
+                <div class="typewriter">
+                    <span class="typed-text"></span>
+                    <span class="cursor">&nbsp;</span>
+                </div>
+                <div class="typewriter-shadow"></div>
+            </div>
+            
+            <p class="hero-text animate__animated animate__fadeInUp" data-aos-delay="500">
+                Third-year Computer Science student specializing in 
+                <span class="text-highlight">Full Stack Development</span> 
+                at <span class="text-highlight">Chitkara University</span>
             </p>
-            <a href="#contact" class="btn" data-aos="fade-up" data-aos-delay="400">Let's Connect</a>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 data-aos="fade-right">About Me</h2>
-            <p data-aos="fade-left">
-                I am a passionate Web Developer pursuing B.Tech in Computer Science at Chitkara University, Punjab (2023-2027). With expertise in front-end and back-end development, I've developed advanced and creative web solutions.
-            </p>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 data-aos="fade-right">Projects</h2>
-            <div class="project-grid">
-                <div class="project-card" data-aos="zoom-in">
-                    <h3>Snacify</h3>
-                    <p>An interactive vending machine management system.</p>
-                    <a href="https://snacify.netlify.app" target="_blank" class="btn">Visit Site</a>
+            
+            <div class="hero-btns animate__animated animate__fadeInUp" data-aos-delay="600">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <i class="fas fa-arrow-right btn-icon"></i>
+                    <span class="btn-hover-effect"></span>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Contact Me</span>
+                    <i class="fas fa-paper-plane btn-icon"></i>
+                    <span class="btn-hover-effect"></span>
+                </a>
+            </div>
+            
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="700">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="3">0</div>
+                    <div class="stat-label">Years Experience</div>
                 </div>
-                <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
-                    <h3>The Roar Kingdom</h3>
-                    <p>A website promoting wildlife conservation and awareness.</p>
-                    <a href="https://the-roar-kingdom.netlify.app" target="_blank" class="btn">Visit Site</a>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="8">0</div>
+                    <div class="stat-label">Projects Completed</div>
                 </div>
-                <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
-                    <h3>Animweb Technologies</h3>
-                    <p>Professional services platform for 3D modeling and animations.</p>
-                    <a href="https://animweb-technologies.netlify.app/" class="btn">Visit Site</a>
-                </div>
-                <div class="project-card" data-aos="zoom-in" data-aos-delay="600">
-                    <h3>1605 Developers</h3>
-                    <p>A modern platform for software and web development services.</p>
-                    <a href="https://1605-developers.netlify.app/" class="btn">Visit Site</a>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Technologies Used</div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <p class="section-description">I have gained proficiency in a variety of tools and technologies to bring ideas to life on the web. Below are the key skills I use in my development work.</p>
-            
-           <!-- Front-End Skills -->
-<div class="skills-category">
-    <h3 class="category-title">Front-End Development</h3>
-    <div class="skills-list">
-        <div class="skill-item">
-            <i class="fa-brands fa-html5 skill-icon"></i>
-            <p class="skill-name">HTML</p>
-            <div class="progress-bar" data-percent="100"></div>
-        </div>
-        <div class="skill-item">
-            <i class="fa-brands fa-css3-alt skill-icon"></i>
-            <p class="skill-name">CSS</p>
-            <div class="progress-bar" data-percent="100"></div>
-        </div>
-        <div class="skill-item">
-            <i class="fa-brands fa-js skill-icon"></i>
-            <p class="skill-name">JavaScript</p>
-            <div class="progress-bar" data-percent="90"></div>
-        </div>
-        <div class="skill-item">
-            <i class="fa-brands fa-react skill-icon"></i>
-            <p class="skill-name">React</p>
-            <div class="progress-bar" data-percent="75"></div> <!-- Assuming basic knowledge -->
-        </div>
-    </div>
-</div>
-
-<!-- Back-End Skills -->
-<div class="skills-category">
-    <h3 class="category-title">Back-End Development</h3>
-    <div class="skills-list">
-        <div class="skill-item">
-            <i class="fa-brands fa-node skill-icon"></i>
-            <p class="skill-name">Node.js</p>
-            <div class="progress-bar" data-percent="75"></div>
-        </div>
-    </div>
-</div>
-
-<!-- Tools -->
-<div class="skills-category">
-    <h3 class="category-title">Tools & Frameworks</h3>
-    <div class="skills-list">
-        <div class="skill-item">
-            <i class="fa-brands fa-git skill-icon"></i>
-            <p class="skill-name">Git</p>
-            <div class="progress-bar" data-percent="90"></div>
-        </div>
-    </div>
-</div>
-
-        </div>
-    </section>    
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 data-aos="fade-right">Contact Me</h2>
-            <p data-aos="fade-left">
-                Interested in collaborating or want to know more? Reach out!
-            </p>
-            
-            <!-- Social Links -->
-            <div class="social-links">
-                <a href="http://www.linkedin.com/in/pushpendra-s-yadav" target="_blank" class="social-icon" data-aos="zoom-in">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/Pushpendra-Singh-Yadav" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://x.com/psychd2005" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="mailto:pushpendra2005sy@gmail.com" class="social-icon" data-aos="zoom-in" data-aos-delay="600">
-                    <i class="fas fa-envelope"></i>
-                </a>
+        
+        <!-- Hero Image -->
+        <div class="hero-image" data-aos="fade-left" data-aos-delay="400">
+            <div class="image-wrapper">
+                <div class="image-frame">
+                    <img src="photograph.png" alt="Pushpendra Singh Yadav" class="profile-img">
+                    <div class="image-overlay"></div>
+                    <div class="image-shine"></div>
+                </div>
+                
+                <!-- Tech Badges -->
+                <div class="tech-badge react" data-tooltip="React.js">
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="tech-badge node" data-tooltip="Node.js">
+                    <i class="fab fa-node-js"></i>
+                </div>
+                <div class="tech-badge python" data-tooltip="Python">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="tech-badge java" data-tooltip="Java">
+                    <i class="fab fa-java"></i>
+                </div>
+                <div class="tech-badge html" data-tooltip="HTML5">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="tech-badge css" data-tooltip="CSS3">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
             </div>
         </div>
-    </section>    
+    </div>
+    
+    <!-- Social Links -->
+    <div class="hero-social" data-aos="fade-up" data-aos-delay="800">
+        <a href="www.linkedin.com/in/pushpendra-s-yadav" class="social-link" aria-label="LinkedIn" data-tooltip="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            <span class="social-tooltip">LinkedIn</span>
+        </a>
+        <a href="https://github.com/Pushpendra-Singh-Yadav" class="social-link" aria-label="GitHub" data-tooltip="GitHub">
+            <i class="fab fa-github"></i>
+            <span class="social-tooltip">GitHub</span>
+        </a>
+    </div>
+    
+    <!-- Theme Particles -->
+    <div class="theme-particles">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Pushpendra Singh Yadav. All Rights Reserved.</p>
-    </footer>
+   <!-- About Section -->
+<section id="about" class="section about">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <p class="section-subtitle">Let me introduce myself</p>
+            <div class="section-decoration">
+                <span class="decoration-line"></span>
+                <span class="decoration-dot"></span>
+                <span class="decoration-line"></span>
+            </div>
+        </div>
+        
+        <div class="about-content grid">
+            <div class="about-image-container" data-aos="fade-right">
+                <div class="about-image">
+                    <img src="about-me-photo.png" alt="Pushpendra Singh Yadav" class="profile-img">
+                    <div class="image-overlay"></div>
+                    <div class="tech-stack">
+                        <div class="tech-icon" data-tooltip="JavaScript">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="tech-icon" data-tooltip="React">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="tech-icon" data-tooltip="Node.js">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="tech-icon" data-tooltip="Python">
+                            <i class="fab fa-python"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-border-animation"></div>
+            </div>
+            
+            <div class="about-text" data-aos="fade-left">
+                <h3 class="about-headline">Crafting Digital Experiences <span class="text-gradient">Through Code</span></h3>
+                <p class="about-intro">I'm a passionate Full Stack Developer currently pursuing my Bachelor's in Computer Science at Chitkara University, specializing in creating seamless web applications that solve real-world problems.</p>
+                
+                <div class="about-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <span class="info-label">Name:</span>
+                            <p class="info-value">Pushpendra Singh Yadav</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="info-label">Email:</span>
+                            <p class="info-value">pushpendra2005sy@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <span class="info-label">Location:</span>
+                            <p class="info-value">Rajpura, Punjab, India</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div>
+                            <span class="info-label">University:</span>
+                            <p class="info-value">Chitkara University (2023-2027)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="progress-header">
+                            <span>Full Stack Development</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="progress-header">
+                            <span>Problem Solving</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-cta">
+                    <a href="Pushpendra-S.-Yadav CV.pdf" class="btn btn-primary btn-download" download>
+                        <span>Download CV</span>
+                        <i class="fas fa-download btn-icon"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-hire">
+                        <span>Hire Me</span>
+                        <i class="fas fa-paper-plane btn-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- JS Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="main.js"></script>
+    <!-- Education Section -->
+<section id="education" class="section education">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="section-title">My <span>Education</span></h2>
+            <p class="section-subtitle">My Academic Journey</p>
+            <div class="section-divider">
+                <div class="divider-line" data-aos="fade-right" data-aos-delay="300"></div>
+                <div class="divider-icon" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="divider-line" data-aos="fade-left" data-aos-delay="300"></div>
+            </div>
+        </div>
+        
+        <div class="education-visual">
+            <!-- Animated background elements -->
+            <div class="visual-bg">
+                <div class="bg-particle particle-1"></div>
+                <div class="bg-particle particle-2"></div>
+                <div class="bg-particle particle-3"></div>
+                <div class="bg-particle particle-4"></div>
+            </div>
+            
+            <!-- Interactive timeline -->
+            <div class="timeline-container">
+                <div class="timeline-progress" data-aos="fade-down">
+                    <div class="progress-bar">
+                        <div class="progress-dot"></div>
+                    </div>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item" data-year="2023-2027" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-pulse"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-aos="fade-up" data-aos-delay="300">2023 - 2027</div>
+                            <div class="content-card" data-aos="flip-up" data-aos-delay="400">
+                                <div class="card-header">
+                                    <div class="header-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                        <div class="icon-ring"></div>
+                                    </div>
+                                    <h3>B.Tech in Computer Science Engineering</h3>
+                                    <div class="university-logo">
+                                        <img src="CU-logo.png" alt="Chitkara University">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h4>Chitkara University, Rajpura, Punjab, India</h4>
+                                    <div class="education-details">
+                                        <div class="detail-item" data-aos="fade-right" data-aos-delay="500">
+                                            <div class="detail-icon">
+                                                <i class="fas fa-certificate"></i>
+                                            </div>
+                                            <div class="detail-content">
+                                                <span>Specialization:</span>
+                                                <p>Computer Science Engineering</p>
+                                            </div>
+                                        </div>
+                                        <div class="detail-item" data-aos="fade-right" data-aos-delay="550">
+                                            <div class="detail-icon">
+                                                <i class="fas fa-chart-line"></i>
+                                            </div>
+                                            <div class="detail-content">
+                                                <span>Current CGPA:</span>
+                                                <div class="gpa-meter">
+                                                    <div class="meter-track">
+                                                        <div class="meter-fill" data-percent="65"></div>
+                                                    </div>
+                                                    <span class="meter-value">6.5/10</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="detail-item" data-aos="fade-right" data-aos-delay="600">
+                                            <div class="detail-icon">
+                                                <i class="fas fa-calendar-alt"></i>
+                                            </div>
+                                            <div class="detail-content">
+                                                <span>Expected Graduation:</span>
+                                                <p>August 2027</p>
+                                            </div>
+                                        </div>
+                                        <div class="detail-item" data-aos="fade-right" data-aos-delay="650">
+                                            <div class="detail-icon">
+                                                <i class="fas fa-book-reader"></i>
+                                            </div>
+                                            <div class="detail-content">
+                                                <span>Current Status:</span>
+                                                <p>3rd Year, 5th Semester</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer" data-aos="fade-up" data-aos-delay="700">
+                                        <div class="current-status">
+                                            <div class="status-pulse"></div>
+                                            <span>Currently Pursuing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-year="2021-2023" data-aos="fade-up" data-aos-delay="250">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-pulse"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-aos="fade-up" data-aos-delay="350">2021 - 2023</div>
+                            <div class="content-card" data-aos="flip-up" data-aos-delay="450">
+                                <div class="card-header">
+                                    <div class="header-icon">
+                                        <i class="fas fa-school"></i>
+                                        <div class="icon-ring"></div>
+                                    </div>
+                                    <h3>Higher Secondary (12th Grade)</h3>
+                                </div>
+                                <div class="card-body">
+                                    <h4>Guru Nanak Khalsa Sr. Sec. School, Chandigarh</h4>
+                                    <div class="education-details">
+                                        <div class="detail-item" data-aos="fade-left" data-aos-delay="550">
+                                            <div class="detail-icon">
+                                                <i class="fas fa-percentage"></i>
+                                            </div>
+                                            <div class="detail-content">
+                                                <span>Percentage:</span>
+                                                <div class="percentage-meter">
+                                                    <div class="meter-track">
+                                                        <div class="meter-fill" data-percent="62.4"></div>
+                                                    </div>
+                                                    <span class="meter-value">62.4%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="detail-item" data-aos="fade-left" data-aos-delay="600">
+                                            <div class="detail-icon">
+                                                <i class="fas fa-book"></i>
+                                            </div>
+                                            <div class="detail-content">
+                                                <span>Stream:</span>
+                                                <p>Science (PCM)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-year="2019-2021" data-aos="fade-up" data-aos-delay="300">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-pulse"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date" data-aos="fade-up" data-aos-delay="400">2019 - 2021</div>
+                            <div class="content-card" data-aos="flip-up" data-aos-delay="500">
+                                <div class="card-header">
+                                    <div class="header-icon">
+                                        <i class="fas fa-book-open"></i>
+                                        <div class="icon-ring"></div>
+                                    </div>
+                                    <h3>Secondary (10th Grade)</h3>
+                                </div>
+                                <div class="card-body">
+                                    <h4>Shivalik Public School, Chandigarh</h4>
+                                    <div class="education-details">
+                                        <div class="detail-item" data-aos="fade-right" data-aos-delay="650">
+                                            <div class="detail-icon">
+                                                <i class="fas fa-percentage"></i>
+                                            </div>
+                                            <div class="detail-content">
+                                                <span>Percentage:</span>
+                                                <div class="percentage-meter">
+                                                    <div class="meter-track">
+                                                        <div class="meter-fill" data-percent="72"></div>
+                                                    </div>
+                                                    <span class="meter-value">72%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating university badge -->
+            <div class="university-badge" data-aos="zoom-in" data-aos-delay="700">
+                <div class="badge-container">
+                    <div class="badge-outer-ring"></div>
+                    <div class="badge-inner-ring"></div>
+                    <img src="CU-logo.png" alt="Chitkara University" class="badge-logo">
+                </div>
+                <div class="badge-tooltip">Currently Enrolled</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Skills Section -->
+<section id="skills" class="section skills">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">My <span>Expertise</span></h2>
+            <p class="section-subtitle">Technical & Professional Proficiencies</p>
+            <div class="section-divider">
+                <div class="divider-line" data-aos="fade-right" data-aos-delay="300"></div>
+                <div class="divider-icon" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="divider-line" data-aos="fade-left" data-aos-delay="300"></div>
+            </div>
+        </div>
+        
+        <div class="skills-visual">
+            <div class="visual-bg">
+                <div class="bg-particle particle-1"></div>
+                <div class="bg-particle particle-2"></div>
+                <div class="bg-particle particle-3"></div>
+                <div class="bg-particle particle-4"></div>
+                <div class="bg-particle particle-5"></div>
+            </div>
+            
+            <div class="skills-container grid">
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="category-title">Programming Languages</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-tooltip="C Programming">
+                            <div class="skill-icon"><i class="fas fa-c"></i></div>
+                            <div class="skill-info">
+                                <span>C Programming</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="85"></div>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-tooltip="C++ Programming">
+                            <div class="skill-icon"><i class="fas fa-c"></i></div>
+                            <div class="skill-info">
+                                <span>C++ Programming</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="85"></div>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-tooltip="Python">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="80"></div>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-tooltip="Java">
+                            <div class="skill-icon"><i class="fab fa-java"></i></div>
+                            <div class="skill-info">
+                                <span>Java</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="75"></div>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="category-title">Web Development</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-tooltip="HTML">
+                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                            <div class="skill-info">
+                                <span>HTML</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="95"></div>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-tooltip="CSS">
+                            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                            <div class="skill-info">
+                                <span>CSS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="95"></div>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-tooltip="MERN Stack">
+                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                            <div class="skill-info">
+                                <span>MERN Stack</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="88"></div>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-tooltip="Frontend Development">
+                            <div class="skill-icon"><i class="fas fa-desktop"></i></div>
+                            <div class="skill-info">
+                                <span>Frontend Development</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="90"></div>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-tooltip="Backend Development">
+                            <div class="skill-icon"><i class="fas fa-server"></i></div>
+                            <div class="skill-info">
+                                <span>Backend Development</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="85"></div>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="category-title">Professional Skills</h3>
+                    <div class="skills-list">
+                        <div class="skill-item" data-tooltip="Microsoft Word">
+                            <div class="skill-icon"><i class="fas fa-file-word"></i></div>
+                            <div class="skill-info">
+                                <span>Microsoft Word</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="90"></div>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-tooltip="Microsoft PowerPoint">
+                            <div class="skill-icon"><i class="fas fa-file-powerpoint"></i></div>
+                            <div class="skill-info">
+                                <span>Microsoft PowerPoint</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="85"></div>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-tooltip="Team Collaboration">
+                            <div class="skill-icon"><i class="fas fa-users"></i></div>
+                            <div class="skill-info">
+                                <span>Team Collaboration</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="92"></div>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-tooltip="Leadership">
+                            <div class="skill-icon"><i class="fas fa-chess-king"></i></div>
+                            <div class="skill-info">
+                                <span>Leadership</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="88"></div>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-tooltip="Problem Solving">
+                            <div class="skill-icon"><i class="fas fa-puzzle-piece"></i></div>
+                            <div class="skill-info">
+                                <span>Problem Solving</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="90"></div>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-tooltip="Agile Methodologies">
+                            <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                            <div class="skill-info">
+                                <span>Agile Methodologies</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-percent="85"></div>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-badge" data-aos="zoom-in" data-aos-delay="400">
+                <div class="badge-container">
+                    <div class="badge-outer-ring"></div>
+                    <div class="badge-inner-ring"></div>
+                    <i class="fas fa-star badge-icon"></i>
+                </div>
+                <div class="badge-tooltip">Advanced Proficiency</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="section projects">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">My <span>Projects</span></h2>
+            <p class="section-subtitle">Showcasing My Recent Creations</p>
+            <div class="section-divider">
+                <div class="divider-line" data-aos="fade-right" data-aos-delay="300"></div>
+                <div class="divider-icon" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="divider-line" data-aos="fade-left" data-aos-delay="300"></div>
+            </div>
+        </div>
+        
+        <div class="projects-visual">
+            <div class="visual-bg">
+                <div class="bg-particle particle-1"></div>
+                <div class="bg-particle particle-2"></div>
+                <div class="bg-particle particle-3"></div>
+                <div class="bg-particle particle-4"></div>
+                <div class="bg-particle particle-5"></div>
+            </div>
+            
+            <div class="projects-grid grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="animweb-technologies.png" alt="AnimWeb Technologies">
+                        <div class="project-overlay">
+                            <h3>AnimWeb Technologies</h3>
+                            <p>Live Web Development Company Site</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AnimWeb Technologies</h3>
+                        <p>A professional website for a web development company, showcasing services and a dynamic portfolio.</p>
+                        <div class="project-links">
+                            <a href="https://animweb-technologies.com/" class="btn btn-primary btn-small" target="_blank">
+                                <i class="fas fa-eye"></i> View Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="AwT-Academy.png" alt="AwT Academy">
+                        <div class="project-overlay">
+                            <h3>AwT Academy</h3>
+                            <p>Live Educational Platform</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AwT Academy</h3>
+                        <p>An engaging platform offering courses in web development and programming.</p>
+                        <div class="project-links">
+                            <a href="https://animweb-technologies.com/courses" class="btn btn-primary btn-small" target="_blank">
+                                <i class="fas fa-eye"></i> View Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="portfolio.png" alt="Personal Portfolio">
+                        <div class="project-overlay">
+                            <h3>Personal Portfolio</h3>
+                            <p>Responsive Portfolio Website</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Personal Portfolio</h3>
+                        <p>A responsive portfolio website highlighting my skills, projects, and achievements.</p>
+                        <div class="project-links">
+                            <a href="https://pushpendra-singh-yadav.netlify.app/" class="btn btn-primary btn-small" target="_blank">
+                                <i class="fas fa-eye"></i> View Live
+                            </a>
+                            <a href="https://github.com/Pushpendra-Singh-Yadav/Pushpendra-S-Yadav-Portfolio" class="btn btn-secondary btn-small" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="crazy-store.png" alt="Crazy Store">
+                        <div class="project-overlay">
+                            <h3>Crazy Store</h3>
+                            <p>Shirt Seller E-Commerce</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Crazy Store</h3>
+                        <p>A responsive e-commerce website for selling shirts, designed for user engagement.</p>
+                        <div class="project-links">
+                            <a href="https://crazie-store.netlify.app/" class="btn btn-primary btn-small" target="_blank">
+                                <i class="fas fa-eye"></i> View Live
+                            </a>
+                            <a href="https://github.com/Pushpendra-Singh-Yadav/crazy-store" class="btn btn-secondary btn-small" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="snacify.png" alt="Snacify">
+                        <div class="project-overlay">
+                            <h3>Snacify</h3>
+                            <p>Vending Machine Distributor</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Snacify</h3>
+                        <p>A responsive website for a vending machine distributor, showcasing products and services.</p>
+                        <div class="project-links">
+                            <a href="https://snacify.netlify.app" class="btn btn-primary btn-small" target="_blank">
+                                <i class="fas fa-eye"></i> View Live
+                            </a>
+                            <a href="https://github.com/Pushpendra-Singh-Yadav/Snacify" class="btn btn-secondary btn-small" target="_blank">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-badge" data-aos="zoom-in" data-aos-delay="600">
+                <div class="badge-container">
+                    <div class="badge-outer-ring"></div>
+                    <div class="badge-inner-ring"></div>
+                    <i class="fas fa-rocket badge-icon"></i>
+                </div>
+                <div class="badge-tooltip">Innovative Creations</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certificates Section -->
+<section id="certificates" class="section certificates">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">My <span>Certificates</span></h2>
+            <p class="section-subtitle">Achievements in Professional Learning</p>
+            <div class="section-divider">
+                <div class="divider-line" data-aos="fade-right" data-aos-delay="300"></div>
+                <div class="divider-icon" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="divider-line" data-aos="fade-left" data-aos-delay="300"></div>
+            </div>
+        </div>
+        
+        <div class="certificates-visual">
+            <div class="visual-bg">
+                <div class="bg-particle particle-1"></div>
+                <div class="bg-particle particle-2"></div>
+                <div class="bg-particle particle-3"></div>
+                <div class="bg-particle particle-4"></div>
+                <div class="bg-particle particle-5"></div>
+            </div>
+            
+            <div class="certificates-grid grid">
+                <div class="certificate-card" data-aos="fade-up" data-aos-delay="100" data-cert-id="meta-frontend">
+                    <div class="certificate-image">
+                        <img src="Meta front end.png" alt="Meta Front-End Developer">
+                        <div class="certificate-overlay">
+                            <h3>Meta Front-End Developer</h3>
+                            <p>Course by Meta on Coursera</p>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Meta Front-End Developer</h3>
+                        <p>Completed: May 7, 2024</p>
+                        <button class="btn btn-primary btn-small view-cert-btn" data-cert-id="meta-frontend">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="certificate-card" data-aos="fade-up" data-aos-delay="200" data-cert-id="javascript">
+                    <div class="certificate-image">
+                        <img src="Game development.png" alt="JavaScript Mastery">
+                        <div class="certificate-overlay">
+                            <h3>Game Design: Art and Concepts</h3>
+                            <p>Course by Cal Arts on Coursera</p>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Game Design: Art and Concepts</h3>
+                        <p>Completed: Apr 1, 2024</p>
+                        <button class="btn btn-primary btn-small view-cert-btn" data-cert-id="Game Design: Art and Concepts">View Details</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certificate-badge" data-aos="zoom-in" data-aos-delay="500">
+                <div class="badge-container">
+                    <div class="badge-outer-ring"></div>
+                    <div class="badge-inner-ring"></div>
+                    <i class="fas fa-award badge-icon"></i>
+                </div>
+                <div class="badge-tooltip">Certified Excellence</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Certificate Modal -->
+    <div class="certificate-modal" id="certificate-modal">
+        <div class="modal-content">
+            <span class="modal-close">×</span>
+            <div class="modal-details">
+                <h3 id="modal-title"></h3>
+                <p id="modal-issuer"></p>
+                <p id="modal-date"></p>
+                <p id="modal-description"></p>
+                <a href="#" id="modal-link" class="btn btn-primary" target="_blank">View Certificate</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section contact">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Contact <span>Me</span></h2>
+            <p class="section-subtitle">Let's Connect and Create</p>
+            <div class="section-divider">
+                <div class="divider-line" data-aos="fade-right" data-aos-delay="300"></div>
+                <div class="divider-icon" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <div class="divider-line" data-aos="fade-left" data-aos-delay="300"></div>
+            </div>
+        </div>
+        
+        <div class="contact-visual">
+            <div class="visual-bg">
+                <div class="bg-particle particle-1"></div>
+                <div class="bg-particle particle-2"></div>
+                <div class="bg-particle particle-3"></div>
+                <div class="bg-particle particle-4"></div>
+                <div class="bg-particle particle-5"></div>
+            </div>
+            
+            <div class="contact-content grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Ready to Collaborate?</h3>
+                    <p>Reach out for projects, opportunities, or just a friendly chat!</p>
+                    
+                    <div class="info-item" data-aos="fade-right" data-aos-delay="100">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p><a href="mailto:pushpendra2005sy@gmail.com">pushpendra2005sy@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item" data-aos="fade-right" data-aos-delay="200">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+919465265663">+91 9465265663</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item" data-aos="fade-right" data-aos-delay="300">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="icon-ring"></div>
+                        </div>
+                        <div class="info-content">
+                            <h4>Location</h4>
+                            <p>Mohali, Punjab, India</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form action="#" method="POST" name="contact-form" data-netlify="true" data-netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact-form">
+                        <p hidden><input name="bot-field"></p>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <span class="input-glow"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <span class="input-glow"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject">
+                            <span class="input-glow"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                            <span class="input-glow"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="contact-badge" data-aos="zoom-in" data-aos-delay="400">
+                <div class="badge-container">
+                    <div class="badge-outer-ring"></div>
+                    <div class="badge-inner-ring"></div>
+                    <i class="fas fa-comments badge-icon"></i>
+                </div>
+                <div class="badge-tooltip">Let's Talk!</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-visual">
+            <div class="visual-bg">
+                <div class="bg-particle particle-1"></div>
+                <div class="bg-particle particle-2"></div>
+                <div class="bg-particle particle-3"></div>
+                <div class="bg-particle particle-4"></div>
+                <div class="bg-particle particle-5"></div>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-logo" data-aos="fade-up">
+                    <a href="#home" class="logo">PSY<span>.</span></a>
+                    <p class="logo-subtitle">Web Developer & Innovator</p>
+                </div>
+                
+                <div class="footer-bio" data-aos="fade-up" data-aos-delay="100">
+                    <h3>About Me</h3>
+                    <p>I'm Pushpendra Singh Yadav, a passionate web developer specializing in crafting dynamic, responsive, and user-centric websites using HTML, CSS, JavaScript, and the MERN stack. Let's build something extraordinary together!</p>
+                </div>
+                
+                <div class="footer-contact" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Contact Info</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:pushpendra2005sy@gmail.com" class="contact-link">pushpendra2005sy@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919465265663">+91 94652 65663</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Mohali, Punjab, India</span>
+                    </div>
+                </div>
+                
+                <div class="footer-social" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="www.linkedin.com/in/pushpendra-s-yadav" aria-label="LinkedIn" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span class="social-glow"></span>
+                        </a>
+                        <a href="https://github.com/Pushpendra-Singh-Yadav" aria-label="GitHub" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span class="social-glow"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom" data-aos="fade-up" data-aos-delay="500">
+                <p>© 2025 Pushpendra Singh Yadav. All Rights Reserved.</p>
+            </div>
+            
+            <div class="footer-badge" data-aos="zoom-in" data-aos-delay="600">
+                <div class="badge-container">
+                    <div class="badge-outer-ring"></div>
+                    <div class="badge-inner-ring"></div>
+                    <i class="fas fa-bolt badge-icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Back to Top -->
+    <a href="#home" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>

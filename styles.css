@@ -4968,12 +4968,5 @@ form {
         align-items: center;
         gap: 1.5rem;
     }
-    
-    .back-to-top {
-        width: 40px;
-        height: 40px;
-        font-size: 1.6rem;
-        bottom: 2rem;
-        right: 2rem;
-    }
+
 }

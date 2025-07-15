@@ -186,124 +186,133 @@
     </div>
 </header>
 
-    <!-- Hero Section -->
-<section id="home" class="hero">
+<section id="home" class="hero relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 flex items-center justify-center">
     <!-- Animated Background Elements -->
-    <div class="hero-bg-elements">
-        <div class="bg-circle circle-1"></div>
-        <div class="bg-circle circle-2"></div>
-        <div class="bg-circle circle-3"></div>
-        <div class="bg-shape shape-1"></div>
-        <div class="bg-shape shape-2"></div>
+    <div class="hero-bg-elements absolute inset-0">
+        <div class="bg-circle circle-1 absolute rounded-full bg-blue-500/20 blur-3xl animate-pulse"></div>
+        <div class="bg-circle circle-2 absolute rounded-full bg-purple-500/20 blur-3xl animate-pulse delay-1000"></div>
+        <div class="bg-circle circle-3 absolute rounded-full bg-cyan-500/20 blur-3xl animate-pulse delay-2000"></div>
+        <div class="bg-shape shape-1 absolute bg-gradient-to-r from-blue-400/30 to-transparent transform rotate-45"></div>
+        <div class="bg-shape shape-2 absolute bg-gradient-to-l from-purple-400/30 to-transparent transform -rotate-45"></div>
     </div>
-    
-    <div class="container grid">
+
+    <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         <!-- Hero Content -->
-        <div class="hero-content" data-aos="fade-right" data-aos-delay="100">
-            <h4 class="subtitle animate__animated animate__fadeInUp" data-aos-delay="200">
+        <div class="hero-content space-y-6" data-aos="fade-right" data-aos-delay="100">
+            <h4 class="subtitle text-xl md:text-2xl font-semibold text-blue-400 flex items-center gap-2 animate__animated animate__fadeInUp" data-aos-delay="200">
                 <span class="greeting-text">Hello, I'm</span>
-                <span class="greeting-emoji">👋</span>
+                <span class="greeting-emoji animate-bounce">👋</span>
             </h4>
             
-            <h1 class="title animate__animated animate__fadeInUp" data-aos-delay="300">
-                <span class="title-name">Pushpendra</span>
-                <span class="title-highlight">Singh Yadav</span>
+            <h1 class="title text-4xl md:text-6xl font-bold text-white leading-tight animate__animated animate__fadeInUp" data-aos-delay="300">
+                <span class="title-name">Pushpendra Singh Yadav</span>
             </h1>
             
-            <div class="typewriter-container animate__animated animate__fadeInUp" data-aos-delay="400">
+            <div class="typewriter-container">
                 <div class="typewriter">
                     <span class="typed-text"></span>
-                    <span class="cursor">&nbsp;</span>
+                    <span class="cursor animate-blink">|</span>
                 </div>
-                <div class="typewriter-shadow"></div>
             </div>
             
-            <p class="hero-text animate__animated animate__fadeInUp" data-aos-delay="500">
-                Third-year Computer Science student specializing in 
-                <span class="text-highlight">Full Stack Development</span> 
-                at <span class="text-highlight">Chitkara University</span>
+            <p class="hero-text text-lg md:text-xl text-gray-300 max-w-lg animate__animated animate__fadeInUp" data-aos-delay="500">
+                Third-year <span class="text-highlight font-semibold text-blue-400">Computer Science</span> student specializing in 
+                <span class="text-highlight font-semibold text-blue-400">Full Stack Development</span> at 
+                <span class="text-highlight font-semibold text-blue-400">Chitkara University</span>
             </p>
             
-            <div class="hero-btns animate__animated animate__fadeInUp" data-aos-delay="600">
-                <a href="#projects" class="btn btn-primary">
+            <div class="hero-btns flex gap-4 animate__animated animate__fadeInUp" data-aos-delay="600">
+                <a href="#projects" class="btn btn-primary relative px-6 py-3 bg-blue-600 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:bg-blue-700 hover:scale-105">
                     <span>View Projects</span>
-                    <i class="fas fa-arrow-right btn-icon"></i>
-                    <span class="btn-hover-effect"></span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                    <span class="btn-hover-effect absolute inset-0 bg-blue-400/30 scale-0 transition-transform duration-300"></span>
                 </a>
-                <a href="#contact" class="btn btn-secondary">
+                <a href="#contact" class="btn btn-secondary relative px-6 py-3 bg-transparent border-2 border-blue-400 text-blue-400 font-semibold rounded-full transition-all duration-300 hover:bg-blue-400 hover:text-white hover:scale-105">
                     <span>Contact Me</span>
-                    <i class="fas fa-paper-plane btn-icon"></i>
-                    <span class="btn-hover-effect"></span>
+                    <i class="fas fa-paper-plane ml-2"></i>
+                    <span class="btn-hover-effect absolute inset-0 bg-blue-400/30 scale-0 transition-transform duration-300"></span>
                 </a>
             </div>
             
-            <div class="hero-stats" data-aos="fade-up" data-aos-delay="700">
-                <div class="stat-item">
-                    <div class="stat-number" data-count="3">3</div>
-                    <div class="stat-label">Years Experience</div>
+            <div class="hero-stats grid grid-cols-3 gap-6 mt-8" data-aos="fade-up" data-aos-delay="700">
+                <div class="stat-item text-center">
+                    <div class="stat-number text-3xl md:text-4xl font-bold text-blue-400" data-count="3">3</div>
+                    <div class="stat-label text-gray-300 text-sm md:text-base">Years Experience</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="8">8</div>
-                    <div class="stat-label">Projects Completed</div>
+                <div class="stat-item text-center">
+                    <div class="stat-number text-3xl md:text-4xl font-bold text-blue-400" data-count="8">8</div>
+                    <div class="stat-label text-gray-300 text-sm md:text-base">Projects Completed</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="15">15</div>
-                    <div class="stat-label">Technologies Used</div>
+                <div class="stat-item text-center">
+                    <div class="stat-number text-3xl md:text-4xl font-bold text-blue-400" data-count="15">15</div>
+                    <div class="stat-label text-gray-300 text-sm md:text-base">Technologies Used</div>
                 </div>
             </div>
         </div>
         
         <!-- Hero Image -->
-        <div class="hero-image" data-aos="fade-left" data-aos-delay="400">
-            <div class="image-wrapper">
-                <div class="image-frame">
-                    <img src="photograph.png" alt="Pushpendra Singh Yadav" class="profile-img">
-                    <div class="image-overlay"></div>
-                    <div class="image-shine"></div>
+        <div class="hero-image relative" data-aos="fade-left" data-aos-delay="400">
+            <div class="image-wrapper relative w-full max-w-md mx-auto">
+                <div class="image-frame relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                    <img src="photograph.png" alt="Pushpendra Singh Yadav" class="profile-img w-full h-full object-cover">
+                    <div class="image-overlay absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                    <div class="image-shine absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full animate-shine"></div>
                 </div>
                 
                 <!-- Tech Badges -->
-                <div class="tech-badge react" data-tooltip="React.js">
-                    <i class="fab fa-react"></i>
-                </div>
-                <div class="tech-badge node" data-tooltip="Node.js">
-                    <i class="fab fa-node-js"></i>
-                </div>
-                <div class="tech-badge python" data-tooltip="Python">
-                    <i class="fab fa-python"></i>
-                </div>
-                <div class="tech-badge java" data-tooltip="Java">
-                    <i class="fab fa-java"></i>
-                </div>
-                <div class="tech-badge html" data-tooltip="HTML5">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <div class="tech-badge css" data-tooltip="CSS3">
-                    <i class="fab fa-css3-alt"></i>
+                <div class="tech-badges absolute inset-0 flex flex-wrap justify-center gap-4 p-4">
+                    <div class="tech-badge react p-3 bg-blue-600/80 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" data-tooltip="React.js">
+                        <i class="fab fa-react text-xl text-white"></i>
+                    </div>
+                    <div class="tech-badge node p-3 bg-green-600/80 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" data-tooltip="Node.js">
+                        <i class="fab fa-node-js text-xl text-white"></i>
+                    </div>
+                    <div class="tech-badge python p-3 bg-yellow-600/80 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" data-tooltip="Python">
+                        <i class="fab fa-python text-xl text-white"></i>
+                    </div>
+                    <div class="tech-badge java p-3 bg-red-600/80 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" data-tooltip="Java">
+                        <i class="fab fa-java text-xl text-white"></i>
+                    </div>
+                    <div class="tech-badge html p-3 bg-orange-600/80 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" data-tooltip="HTML5">
+                        <i class="fab fa-html5 text-xl text-white"></i>
+                    </div>
+                    <div class="tech-badge css p-3 bg-blue-400/80 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" data-tooltip="CSS3">
+                        <i class="fab fa-css3-alt text-xl text-white"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
     <!-- Social Links -->
-    <div class="hero-social" data-aos="fade-up" data-aos-delay="800">
-        <a href="www.linkedin.com/in/pushpendra-s-yadav" class="social-link" aria-label="LinkedIn" data-tooltip="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-            <span class="social-tooltip">LinkedIn</span>
+    <div class="hero-social absolute bottom-8 left-8 flex flex-col gap-4" data-aos="fade-up" data-aos-delay="800">
+        <a href="www.linkedin.com/in/pushpendra-s-yadav" class="social-link relative p-3 bg-blue-600/80 rounded-full shadow-lg hover:bg-blue-700 hover:scale-110 transition-all duration-300" aria-label="LinkedIn" data-tooltip="LinkedIn">
+            <i class="fab fa-linkedin-in text-xl text-white"></i>
+            <span class="social-tooltip absolute left-full ml-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 transition-opacity duration-300">LinkedIn</span>
         </a>
-        <a href="https://github.com/Pushpendra-Singh-Yadav" class="social-link" aria-label="GitHub" data-tooltip="GitHub">
-            <i class="fab fa-github"></i>
-            <span class="social-tooltip">GitHub</span>
+        <a href="https://github.com/Pushpendra-Singh-Yadav" class="social-link relative p-3 bg-gray-800/80 rounded-full shadow-lg hover:bg-gray-900 hover:scale-110 transition-all duration-300" aria-label="GitHub" data-tooltip="GitHub">
+            <i class="fab fa-github text-xl text-white"></i>
+            <span class="social-tooltip absolute left-full ml-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 transition-opacity duration-300">GitHub</span>
         </a>
     </div>
     
     <!-- Theme Particles -->
-    <div class="theme-particles">
-        <div class="particle particle-1"></div>
-        <div class="particle particle-2"></div>
-        <div class="particle particle-3"></div>
+    <div class="theme-particles absolute inset-0 pointer-events-none">
+        <div class="particle particle-1 absolute bg-blue-400/50 rounded-full animate-float"></div>
+        <div class="particle particle-2 absolute bg-purple-400/50 rounded-full animate-float delay-500"></div>
+        <div class="particle particle-3 absolute bg-cyan-400/50 rounded-full animate-float delay-1000"></div>
     </div>
 </section>
+
+    <!-- AOS Initialization -->
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-in-out',
+            offset: 100
+        });
+    </script>
 
    <!-- About Section -->
 <section id="about" class="section about">

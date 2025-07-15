@@ -271,22 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update on theme change
     themeSwitch.addEventListener('change', updateHeroTheme);
-    
-    // ================ Scroll Down Button ================
-    const scrollDown = document.querySelector('.scroll-down');
-    
-    scrollDown.addEventListener('click', function() {
-        const aboutSection = document.querySelector('#about');
-        if (aboutSection) {
-            const headerHeight = document.querySelector('.header').offsetHeight;
-            const targetPosition = aboutSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
+
     
     // ================ Intersection Observer for Animations ================
     const heroSection = document.querySelector('.hero');

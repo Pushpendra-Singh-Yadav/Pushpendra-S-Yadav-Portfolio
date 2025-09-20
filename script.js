@@ -472,6 +472,96 @@ document.addEventListener('DOMContentLoaded', () => {
     badgeObserver.observe(badge);
 });
 
+
+
+// work experience section//
+// work-experience.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Select the main section to check for its presence on the page
+    const workExperienceSection = document.getElementById('work-experience');
+
+    if (workExperienceSection) {
+        console.log('Work Experience section found. Initializing...');
+        initializeWorkExperience();
+    } else {
+        console.warn('Work Experience section with ID "work-experience" not found.');
+    }
+});
+
+/**
+ * Initializes interactive features for the work experience section.
+ * This is a good place to add more complex behaviors like modals or animations.
+ */
+function initializeWorkExperience() {
+    console.log('Work Experience section initialized.');
+
+    // Event listener for the experience card
+    const experienceCard = document.querySelector('.experience-card');
+    if (experienceCard) {
+        experienceCard.addEventListener('mouseenter', () => {
+            console.log('Mouse entered experience card. Adding hover effects.');
+            // This is where you could add advanced JS-based animations
+            // e.g., GSAP or other libraries for more complex effects.
+        });
+
+        experienceCard.addEventListener('mouseleave', () => {
+            console.log('Mouse left experience card. Removing hover effects.');
+        });
+    }
+
+    // Event listener for each skill badge for future interactivity
+    const skillBadges = document.querySelectorAll('.skill-badge');
+    skillBadges.forEach(badge => {
+        badge.addEventListener('click', (event) => {
+            const skillName = event.currentTarget.dataset.skill;
+            alert(`You clicked on the skill: ${skillName}`);
+        });
+    });
+
+    // You can add more functions here to handle various interactions.
+    // For example, a function to open a detailed project modal.
+    function showProjectDetails() {
+        // Placeholder for a function that opens a modal with more project info.
+        console.log('Placeholder for showing a detailed project modal.');
+    }
+}
+
+// NOTE: This is a simple alert for demonstration. For a real website,
+// you should use a custom modal or a non-blocking notification.
+function alert(message) {
+    const body = document.body;
+    const alertBox = document.createElement('div');
+    alertBox.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #3b82f6;
+        color: white;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        z-index: 1000;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+        opacity: 0;
+        animation: fadeIn 0.3s forwards;
+    `;
+    alertBox.innerHTML = `
+        <p>${message}</p>
+        <button onclick="this.parentNode.remove()" style="margin-top: 10px; padding: 5px 15px; border: none; border-radius: 5px; background-color: white; color: #3b82f6; cursor: pointer;">OK</button>
+    `;
+    body.appendChild(alertBox);
+
+    const styleSheet = document.createElement("style");
+    styleSheet.innerHTML = `@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }`;
+    document.head.appendChild(styleSheet);
+}
+
+
+
+
 //project section//
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS (Animate on Scroll) library

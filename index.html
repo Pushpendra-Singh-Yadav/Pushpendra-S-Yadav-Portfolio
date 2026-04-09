@@ -3,1328 +3,687 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pushpendra Singh Yadav | Portfolio</title>
-    
-    <!-- Fonts -->
+    <title>Pushpendra Singh Yadav | Full Stack Developer & 3D Artist</title>
+    <meta name="description" content="Portfolio of Pushpendra Singh Yadav - Full Stack Developer, 3D Modeller and Animator. Specializing in MERN Stack, Web Development, and Creative Design.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    
-    <!-- Animation Libraries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Advanced Preloader -->
-    <div class="preloader">
-        <div class="preloader-container">
-            <div class="preloader-logo">
-                <span class="logo-letter">P</span>
-                <span class="logo-letter">S</span>
-                <span class="logo-letter">Y</span>
-                <span class="logo-dot">.</span>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-cube">
+                <div class="cube-face front"></div>
+                <div class="cube-face back"></div>
+                <div class="cube-face left"></div>
+                <div class="cube-face right"></div>
+                <div class="cube-face top"></div>
+                <div class="cube-face bottom"></div>
             </div>
-            <div class="preloader-progress">
-                <div class="progress-bar"></div>
-                <div class="progress-text">0%</div>
+            <div class="preloader-text">
+                <span data-text="PUSHPENDRA">PUSHPENDRA</span>
             </div>
-            <div class="preloader-message">Initializing Portfolio Experience</div>
-            <div class="preloader-animation">
-                <div class="animation-circle circle-1"></div>
-                <div class="animation-circle circle-2"></div>
-                <div class="animation-circle circle-3"></div>
-                <div class="animation-circle circle-4"></div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill" id="preloader-fill"></div>
             </div>
+            <div class="preloader-percent" id="preloader-percent">0%</div>
         </div>
     </div>
 
-<!-- Glass Morphism Navigation -->
-<header class="header" id="header">
-    <div class="container">
-        <div class="header-content">
-            <!-- Logo with Animation -->
-            <a href="#home" class="logo" data-aos="fade-right" data-aos-delay="100">
-                <span class="logo-text">PSY</span>
-                <span class="logo-dot">.</span>
-                <span class="logo-highlight"></span>
+    <!-- Three.js Canvas -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Pushpendra</span>
+                <span class="logo-bracket">/&gt;</span>
             </a>
-            
-            <!-- Main Navigation -->
-            <nav class="navbar" data-aos="fade-down" data-aos-delay="200">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link active">
-                            <span class="link-icon"><i class="fas fa-home"></i></span>
-                            <span class="link-text">Home</span>
-                            <span class="link-hover"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">
-                            <span class="link-icon"><i class="fas fa-user"></i></span>
-                            <span class="link-text">About</span>
-                            <span class="link-hover"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#education" class="nav-link">
-                            <span class="link-icon"><i class="fas fa-graduation-cap"></i></span>
-                            <span class="link-text">Education</span>
-                            <span class="link-hover"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#skills" class="nav-link">
-                            <span class="link-icon"><i class="fas fa-code"></i></span>
-                            <span class="link-text">Skills</span>
-                            <span class="link-hover"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#projects" class="nav-link">
-                            <span class="link-icon"><i class="fas fa-briefcase"></i></span>
-                            <span class="link-text">Projects</span>
-                            <span class="link-hover"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#certificates" class="nav-link">
-                            <span class="link-icon"><i class="fas fa-certificate"></i></span>
-                            <span class="link-text">Certificates</span>
-                            <span class="link-hover"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">
-                            <span class="link-icon"><i class="fas fa-envelope"></i></span>
-                            <span class="link-text">Contact</span>
-                            <span class="link-hover"></span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            
-            <!-- Mobile Menu Toggle -->
-            <div class="menu-toggle" data-aos="fade-left" data-aos-delay="400">
-                <div class="hamburger">
-                    <span class="hamburger-line line-1"></span>
-                    <span class="hamburger-line line-2"></span>
-                    <span class="hamburger-line line-3"></span>
-                </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#education" class="nav-link" data-section="education">Education</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
             </div>
-        </div>
-    </div>
-    
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav">
-        <div class="mobile-nav-content">
-            <ul class="mobile-nav-list">
-                <li class="mobile-nav-item">
-                    <a href="#home" class="mobile-nav-link active">
-                        <span class="mobile-link-icon"><i class="fas fa-home"></i></span>
-                        <span class="mobile-link-text">Home</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="#about" class="mobile-nav-link">
-                        <span class="mobile-link-icon"><i class="fas fa-user"></i></span>
-                        <span class="mobile-link-text">About</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="#education" class="mobile-nav-link">
-                        <span class="mobile-link-icon"><i class="fas fa-graduation-cap"></i></span>
-                        <span class="mobile-link-text">Education</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="#skills" class="mobile-nav-link">
-                        <span class="mobile-link-icon"><i class="fas fa-code"></i></span>
-                        <span class="mobile-link-text">Skills</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="#projects" class="mobile-nav-link">
-                        <span class="mobile-link-icon"><i class="fas fa-briefcase"></i></span>
-                        <span class="mobile-link-text">Projects</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="#certificates" class="mobile-nav-link">
-                        <span class="mobile-link-icon"><i class="fas fa-certificate"></i></span>
-                        <span class="mobile-link-text">Certificates</span>
-                    </a>
-                </li>
-                <li class="mobile-nav-item">
-                    <a href="#contact" class="mobile-nav-link">
-                        <span class="mobile-link-icon"><i class="fas fa-envelope"></i></span>
-                        <span class="mobile-link-text">Contact</span>
-                    </a>
-                </li>
-            </ul>               
-            <div class="mobile-social-links">
-                <a href="www.linkedin.com/in/pushpendra-s-yadav" class="mobile-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/Pushpendra-Singh-Yadav" class="mobile-social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            </div>
-        </div>
-    </div>
-</header>
-
-<section id="home" class="hero relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 flex items-center justify-center">
-    <!-- Animated Background Elements -->
-    <div class="hero-bg-elements absolute inset-0">
-        <div class="bg-circle circle-1 absolute rounded-full bg-blue-500/20 blur-3xl animate-pulse"></div>
-        <div class="bg-circle circle-2 absolute rounded-full bg-purple-500/20 blur-3xl animate-pulse delay-1000"></div>
-        <div class="bg-circle circle-3 absolute rounded-full bg-cyan-500/20 blur-3xl animate-pulse delay-2000"></div>
-        <div class="bg-shape shape-1 absolute bg-gradient-to-r from-blue-400/30 to-transparent transform rotate-45"></div>
-        <div class="bg-shape shape-2 absolute bg-gradient-to-l from-purple-400/30 to-transparent transform -rotate-45"></div>
-    </div>
-
-    <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-        <!-- Hero Content -->
-        <div class="hero-content space-y-6" data-aos="fade-right" data-aos-delay="100">
-            <h4 class="subtitle text-xl md:text-2xl font-semibold text-blue-400 flex items-center gap-2 animate__animated animate__fadeInUp" data-aos-delay="200">
-                <span class="greeting-text">Hello, I'm</span>
-                <span class="greeting-emoji animate-bounce">👋</span>
-            </h4>
-            
-            <h1 class="title text-4xl md:text-6xl font-bold text-white leading-tight animate__animated animate__fadeInUp" data-aos-delay="300">
-                <span class="title-name">Pushpendra Singh Yadav</span>
-            </h1>
-            
-            <div class="typewriter-container">
-                <div class="typewriter">
-                    <span class="typed-text"></span>
-                    <span class="cursor animate-blink">|</span>
-                </div>
-            </div>
-            
-            <p class="hero-text text-lg md:text-xl text-gray-300 max-w-lg animate__animated animate__fadeInUp" data-aos-delay="500">
-                Third-year <span class="text-highlight font-semibold text-blue-400">Computer Science</span> student specializing in 
-                <span class="text-highlight font-semibold text-blue-400">Full Stack Development</span> at 
-                <span class="text-highlight font-semibold text-blue-400">Chitkara University</span>
-            </p>
-            
-            <div class="hero-btns flex gap-4 animate__animated animate__fadeInUp" data-aos-delay="600">
-                <a href="#projects" class="btn btn-primary relative px-6 py-3 bg-blue-600 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:bg-blue-700 hover:scale-105">
-                    <span>View Projects</span>
-                    <i class="fas fa-arrow-right ml-2"></i>
-                    <span class="btn-hover-effect absolute inset-0 bg-blue-400/30 scale-0 transition-transform duration-300"></span>
+            <div class="nav-actions">
+                <a href="https://github.com/Pushpendra-Singh-Yadav" target="_blank" class="nav-social" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
                 </a>
-                <a href="#contact" class="btn btn-secondary relative px-6 py-3 bg-transparent border-2 border-blue-400 text-blue-400 font-semibold rounded-full transition-all duration-300 hover:bg-blue-400 hover:text-white hover:scale-105">
-                    <span>Contact Me</span>
-                    <i class="fas fa-paper-plane ml-2"></i>
-                    <span class="btn-hover-effect absolute inset-0 bg-blue-400/30 scale-0 transition-transform duration-300"></span>
+                <a href="https://www.linkedin.com/in/pushpendra-s-yadav" target="_blank" class="nav-social" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
                 </a>
-            </div>
-            
-            <div class="hero-stats grid grid-cols-3 gap-6 mt-8" data-aos="fade-up" data-aos-delay="700">
-                <div class="stat-item text-center">
-                    <div class="stat-number text-3xl md:text-4xl font-bold text-blue-400" data-count="3">3</div>
-                    <div class="stat-label text-gray-300 text-sm md:text-base">Years Experience</div>
-                </div>
-                <div class="stat-item text-center">
-                    <div class="stat-number text-3xl md:text-4xl font-bold text-blue-400" data-count="8">8</div>
-                    <div class="stat-label text-gray-300 text-sm md:text-base">Projects Completed</div>
-                </div>
-                <div class="stat-item text-center">
-                    <div class="stat-number text-3xl md:text-4xl font-bold text-blue-400" data-count="15">15</div>
-                    <div class="stat-label text-gray-300 text-sm md:text-base">Technologies Used</div>
-                </div>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
-        
-        <!-- Hero Image -->
-        <div class="hero-image relative" data-aos="fade-left" data-aos-delay="400">
-            <div class="image-wrapper relative w-full max-w-md mx-auto">
-                <div class="image-frame relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
-                    <img src="photograph.png" alt="Pushpendra Singh Yadav" class="profile-img w-full h-full object-cover">
-                    <div class="image-overlay absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                    <div class="image-shine absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full animate-shine"></div>
-                </div>
-                
-                <!-- Tech Badges -->
-                <div class="tech-badges absolute inset-0 flex flex-wrap justify-center gap-4 p-4">
-                    <div class="tech-badge react p-3 bg-blue-600/80 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" data-tooltip="React.js">
-                        <i class="fab fa-react text-xl text-white"></i>
-                    </div>
-                    <div class="tech-badge node p-3 bg-green-600/80 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" data-tooltip="Node.js">
-                        <i class="fab fa-node-js text-xl text-white"></i>
-                    </div>
-                    <div class="tech-badge python p-3 bg-yellow-600/80 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" data-tooltip="Python">
-                        <i class="fab fa-python text-xl text-white"></i>
-                    </div>
-                    <div class="tech-badge java p-3 bg-red-600/80 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" data-tooltip="Java">
-                        <i class="fab fa-java text-xl text-white"></i>
-                    </div>
-                    <div class="tech-badge html p-3 bg-orange-600/80 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" data-tooltip="HTML5">
-                        <i class="fab fa-html5 text-xl text-white"></i>
-                    </div>
-                    <div class="tech-badge css p-3 bg-blue-400/80 rounded-full shadow-lg hover:scale-110 transition-transform duration-300" data-tooltip="CSS3">
-                        <i class="fab fa-css3-alt text-xl text-white"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Social Links -->
-    <div class="hero-social absolute bottom-8 left-8 flex flex-col gap-4" data-aos="fade-up" data-aos-delay="800">
-        <a href="www.linkedin.com/in/pushpendra-s-yadav" class="social-link relative p-3 bg-blue-600/80 rounded-full shadow-lg hover:bg-blue-700 hover:scale-110 transition-all duration-300" aria-label="LinkedIn" data-tooltip="LinkedIn">
-            <i class="fab fa-linkedin-in text-xl text-white"></i>
-            <span class="social-tooltip absolute left-full ml-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 transition-opacity duration-300">LinkedIn</span>
-        </a>
-        <a href="https://github.com/Pushpendra-Singh-Yadav" class="social-link relative p-3 bg-gray-800/80 rounded-full shadow-lg hover:bg-gray-900 hover:scale-110 transition-all duration-300" aria-label="GitHub" data-tooltip="GitHub">
-            <i class="fab fa-github text-xl text-white"></i>
-            <span class="social-tooltip absolute left-full ml-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 transition-opacity duration-300">GitHub</span>
-        </a>
-    </div>
-    
-    <!-- Theme Particles -->
-    <div class="theme-particles absolute inset-0 pointer-events-none">
-        <div class="particle particle-1 absolute bg-blue-400/50 rounded-full animate-float"></div>
-        <div class="particle particle-2 absolute bg-purple-400/50 rounded-full animate-float delay-500"></div>
-        <div class="particle particle-3 absolute bg-cyan-400/50 rounded-full animate-float delay-1000"></div>
-    </div>
-</section>
+    </nav>
 
-    <!-- AOS Initialization -->
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            easing: 'ease-in-out',
-            offset: 100
-        });
-    </script>
-
-   <!-- About Section -->
-<section id="about" class="section about">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2 class="section-title">About <span>Me</span></h2>
-            <p class="section-subtitle">Let me introduce myself</p>
-            <div class="section-decoration">
-                <span class="decoration-line"></span>
-                <span class="decoration-dot"></span>
-                <span class="decoration-line"></span>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Available for opportunities</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-line">
+                        <span class="hero-word">Hi, I'm</span>
+                    </span>
+                    <span class="hero-line">
+                        <span class="hero-word hero-name">Pushpendra</span>
+                    </span>
+                    <span class="hero-line">
+                        <span class="hero-word hero-name">Singh Yadav</span>
+                    </span>
+                </h1>
+                <div class="hero-roles">
+                    <span class="role-static">I'm a </span>
+                    <span class="role-dynamic" id="role-text"></span>
+                    <span class="role-cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Founder &amp; CEO of Animweb Technologies. Full Stack Developer &amp; 3D Artist pursuing B.Tech in Computer Science
+                    at Chitkara University. I craft immersive digital experiences with modern web technologies.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="14">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="15">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Years Coding</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-photo-wrapper">
+                    <div class="hero-photo-frame">
+                        <img src="assets/photograph.png" alt="Pushpendra Singh Yadav" class="hero-photo">
+                    </div>
+                    <div class="hero-photo-ring"></div>
+                    <div class="hero-photo-dots"></div>
+                </div>
             </div>
         </div>
-        
-        <div class="about-content grid">
-            <div class="about-image-container" data-aos="fade-right">
-                <div class="about-image">
-                    <img src="about-me-photo.png" alt="Pushpendra Singh Yadav" class="profile-img">
-                    <div class="image-overlay"></div>
-                    <div class="tech-stack">
-                        <div class="tech-icon" data-tooltip="JavaScript">
-                            <i class="fab fa-js"></i>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <p class="section-subtitle">Getting to know the developer behind the code</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <div class="about-image-card">
+                        <div class="about-avatar">
+                            <img src="assets/about-me-photo.png" alt="Pushpendra Singh Yadav" class="about-photo">
                         </div>
-                        <div class="tech-icon" data-tooltip="React">
-                            <i class="fab fa-react"></i>
+                        <div class="about-image-border"></div>
+                        <div class="about-floating-badge top-right">
+                            <i class="fas fa-medal"></i>
+                            <span>Meta Certified</span>
                         </div>
-                        <div class="tech-icon" data-tooltip="Node.js">
-                            <i class="fab fa-node-js"></i>
-                        </div>
-                        <div class="tech-icon" data-tooltip="Python">
-                            <i class="fab fa-python"></i>
+                        <div class="about-floating-badge bottom-left">
+                            <i class="fas fa-building"></i>
+                            <span>Animweb Tech</span>
                         </div>
                     </div>
                 </div>
-                <div class="image-border-animation"></div>
-            </div>
-            
-            <div class="about-text" data-aos="fade-left">
-                <h3 class="about-headline">Crafting Digital Experiences <span class="text-gradient">Through Code</span></h3>
-                <p class="about-intro">I'm a passionate Full Stack Developer currently pursuing my Bachelor's in Computer Science at Chitkara University, specializing in creating seamless web applications that solve real-world problems.</p>
-                
-                <div class="about-info">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div>
-                            <span class="info-label">Name:</span>
-                            <p class="info-value">Pushpendra Singh Yadav</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <span class="info-label">Email:</span>
-                            <p class="info-value">pushpendra2005sy@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
+                <div class="about-content">
+                    <h3 class="about-heading">Full Stack Developer <span class="ampersand">&</span> 3D Creative</h3>
+                    <p class="about-text">
+                        I'm a third-year Computer Science student at <strong>Chitkara University</strong>,
+                        specializing in Full Stack Development with the <strong>MERN Stack</strong>. My passion
+                        lies at the intersection of technology and creativity &mdash; building scalable web applications
+                        while crafting immersive 3D experiences.
+                    </p>
+                    <p class="about-text">
+                        As the <strong>Founder &amp; CEO of Animweb Technologies</strong>, I combine my development skills
+                        with 3D modeling and animation expertise to create unique digital solutions. My internship
+                        at <strong>Zidio Development</strong> strengthened my foundation in building production-grade
+                        full-stack applications.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
                             <i class="fas fa-map-marker-alt"></i>
+                            <span>Mohali/Rajpura, Punjab, India</span>
                         </div>
-                        <div>
-                            <span class="info-label">Location:</span>
-                            <p class="info-value">Rajpura, Punjab, India</p>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>pushpendra2005sy@gmail.com</span>
                         </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-university"></i>
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>B.Tech CSE, Chitkara University (2023-2027)</span>
                         </div>
-                        <div>
-                            <span class="info-label">University:</span>
-                            <p class="info-value">Chitkara University (2023-2027)</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="progress-container">
-                    <div class="progress-item" data-aos="fade-up" data-aos-delay="100">
-                        <div class="progress-header">
-                            <span>Full Stack Development</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 85%"></div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Founder &amp; CEO, Animweb Technologies</span>
                         </div>
                     </div>
-                    <div class="progress-item" data-aos="fade-up" data-aos-delay="200">
-                        <div class="progress-header">
-                            <span>Problem Solving</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 90%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-cta">
-                    <a href="Pushpendra-S.-Yadav CV.pdf" class="btn btn-primary btn-download" download>
-                        <span>Download CV</span>
-                        <i class="fas fa-download btn-icon"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary btn-hire">
-                        <span>Hire Me</span>
-                        <i class="fas fa-paper-plane btn-icon"></i>
+                    <a href="Pushpendra-S.-Yadav CV.pdf" target="_blank" class="btn btn-primary about-btn">
+                        <span>Download Resume</span>
+                        <i class="fas fa-download"></i>
                     </a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-    <!-- Education Section -->
-<section id="education" class="section education">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="section-title">My <span>Education</span></h2>
-            <p class="section-subtitle">My Academic Journey</p>
-            <div class="section-divider">
-                <div class="divider-line" data-aos="fade-right" data-aos-delay="300"></div>
-                <div class="divider-icon" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="divider-line" data-aos="fade-left" data-aos-delay="300"></div>
-            </div>
-        </div>
-        
-        <div class="education-visual">
-            <!-- Animated background elements -->
-            <div class="visual-bg">
-                <div class="bg-particle particle-1"></div>
-                <div class="bg-particle particle-2"></div>
-                <div class="bg-particle particle-3"></div>
-                <div class="bg-particle particle-4"></div>
-            </div>
-            
-            <!-- Interactive timeline -->
-            <div class="timeline-container">
-                <div class="timeline-progress" data-aos="fade-down">
-                    <div class="progress-bar">
-                        <div class="progress-dot"></div>
-                    </div>
-                </div>
-                
-                <div class="timeline">
-                    <div class="timeline-item" data-year="2023-2027" data-aos="fade-up" data-aos-delay="200">
-                        <div class="timeline-marker">
-                            <div class="marker-dot"></div>
-                            <div class="marker-pulse"></div>
-                            <div class="marker-line"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-date" data-aos="fade-up" data-aos-delay="300">2023 - 2027</div>
-                            <div class="content-card" data-aos="flip-up" data-aos-delay="400">
-                                <div class="card-header">
-                                    <div class="header-icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                        <div class="icon-ring"></div>
-                                    </div>
-                                    <h3>B.Tech in Computer Science Engineering</h3>
-                                    <div class="university-logo">
-                                        <img src="CU-logo.png" alt="Chitkara University">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <h4>Chitkara University, Rajpura, Punjab, India</h4>
-                                    <div class="education-details">
-                                        <div class="detail-item" data-aos="fade-right" data-aos-delay="500">
-                                            <div class="detail-icon">
-                                                <i class="fas fa-certificate"></i>
-                                            </div>
-                                            <div class="detail-content">
-                                                <span>Specialization:</span>
-                                                <p>Computer Science Engineering</p>
-                                            </div>
-                                        </div>
-                                        <div class="detail-item" data-aos="fade-right" data-aos-delay="550">
-                                            <div class="detail-icon">
-                                                <i class="fas fa-chart-line"></i>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="detail-item" data-aos="fade-right" data-aos-delay="600">
-                                            <div class="detail-icon">
-                                                <i class="fas fa-calendar-alt"></i>
-                                            </div>
-                                            <div class="detail-content">
-                                                <span>Expected Graduation:</span>
-                                                <p>August 2027</p>
-                                            </div>
-                                        </div>
-                                        <div class="detail-item" data-aos="fade-right" data-aos-delay="650">
-                                            <div class="detail-icon">
-                                                <i class="fas fa-book-reader"></i>
-                                            </div>
-                                            <div class="detail-content">
-                                                <span>Current Status:</span>
-                                                <p>3rd Year, 5th Semester</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer" data-aos="fade-up" data-aos-delay="700">
-                                        <div class="current-status">
-                                            <div class="status-pulse"></div>
-                                            <span>Currently Pursuing</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item" data-year="2021-2023" data-aos="fade-up" data-aos-delay="250">
-                        <div class="timeline-marker">
-                            <div class="marker-dot"></div>
-                            <div class="marker-pulse"></div>
-                            <div class="marker-line"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-date" data-aos="fade-up" data-aos-delay="350">2021 - 2023</div>
-                            <div class="content-card" data-aos="flip-up" data-aos-delay="450">
-                                <div class="card-header">
-                                    <div class="header-icon">
-                                        <i class="fas fa-school"></i>
-                                        <div class="icon-ring"></div>
-                                    </div>
-                                    <h3>Higher Secondary (12th Grade)</h3>
-                                </div>
-                                <div class="card-body">
-                                    <h4>Guru Nanak Khalsa Sr. Sec. School, Chandigarh</h4>
-                                    <div class="education-details">
-                                        <div class="detail-item" data-aos="fade-left" data-aos-delay="550">
-                                            <div class="detail-icon">
-                                                <i class="fas fa-percentage"></i>
-                                            </div>
-                                            <div class="detail-content">
-                                                <span>Percentage:</span>
-                                                <div class="percentage-meter">
-                                                    <div class="meter-track">
-                                                        <div class="meter-fill" data-percent="62.4"></div>
-                                                    </div>
-                                                    <span class="meter-value">62.4%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="detail-item" data-aos="fade-left" data-aos-delay="600">
-                                            <div class="detail-icon">
-                                                <i class="fas fa-book"></i>
-                                            </div>
-                                            <div class="detail-content">
-                                                <span>Stream:</span>
-                                                <p>Science (PCM)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item" data-year="2019-2021" data-aos="fade-up" data-aos-delay="300">
-                        <div class="timeline-marker">
-                            <div class="marker-dot"></div>
-                            <div class="marker-pulse"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-date" data-aos="fade-up" data-aos-delay="400">2019 - 2021</div>
-                            <div class="content-card" data-aos="flip-up" data-aos-delay="500">
-                                <div class="card-header">
-                                    <div class="header-icon">
-                                        <i class="fas fa-book-open"></i>
-                                        <div class="icon-ring"></div>
-                                    </div>
-                                    <h3>Secondary (10th Grade)</h3>
-                                </div>
-                                <div class="card-body">
-                                    <h4>Shivalik Public School, Chandigarh</h4>
-                                    <div class="education-details">
-                                        <div class="detail-item" data-aos="fade-right" data-aos-delay="650">
-                                            <div class="detail-icon">
-                                                <i class="fas fa-percentage"></i>
-                                            </div>
-                                            <div class="detail-content">
-                                                <span>Percentage:</span>
-                                                <div class="percentage-meter">
-                                                    <div class="meter-track">
-                                                        <div class="meter-fill" data-percent="72"></div>
-                                                    </div>
-                                                    <span class="meter-value">72%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Floating university badge -->
-            <div class="university-badge" data-aos="zoom-in" data-aos-delay="700">
-                <div class="badge-container">
-                    <div class="badge-outer-ring"></div>
-                    <div class="badge-inner-ring"></div>
-                    <img src="CU-logo.png" alt="Chitkara University" class="badge-logo">
-                </div>
-                <div class="badge-tooltip">Currently Enrolled</div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Skills Section -->
-<section id="skills" class="section skills">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2 class="section-title">My <span>Expertise</span></h2>
-            <p class="section-subtitle">Technical & Professional Proficiencies</p>
-            <div class="section-divider">
-                <div class="divider-line" data-aos="fade-right" data-aos-delay="300"></div>
-                <div class="divider-icon" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fas fa-cogs"></i>
-                </div>
-                <div class="divider-line" data-aos="fade-left" data-aos-delay="300"></div>
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
             </div>
-        </div>
-        
-        <div class="skills-visual">
-            <div class="visual-bg">
-                <div class="bg-particle particle-1"></div>
-                <div class="bg-particle particle-2"></div>
-                <div class="bg-particle particle-3"></div>
-                <div class="bg-particle particle-4"></div>
-                <div class="bg-particle particle-5"></div>
+            <div class="skills-tabs">
+                <button class="skill-tab active" data-tab="languages">Languages</button>
+                <button class="skill-tab" data-tab="webdev">Web Development</button>
+                <button class="skill-tab" data-tab="tools">Tools & Soft Skills</button>
             </div>
-            
-            <div class="skills-container grid">
-                <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="category-title">Programming Languages</h3>
-                    <div class="skills-list">
-                        <div class="skill-item" data-tooltip="C Programming">
-                            <div class="skill-icon"><i class="fas fa-c"></i></div>
-                            <div class="skill-info">
-                                <span>C Programming</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="85"></div>
-                                    <span class="skill-percent">85%</span>
-                                </div>
+            <div class="skills-content">
+                <div class="skills-panel active" id="panel-languages">
+                    <div class="skills-grid">
+                        <div class="skill-card" data-tilt>
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <div class="skill-ring" data-percent="85">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">85%</span>
                             </div>
+                            <h4>C Programming</h4>
                         </div>
-                        <div class="skill-item" data-tooltip="C++ Programming">
-                            <div class="skill-icon"><i class="fas fa-c"></i></div>
-                            <div class="skill-info">
-                                <span>C++ Programming</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="85"></div>
-                                    <span class="skill-percent">85%</span>
-                                </div>
+                        <div class="skill-card" data-tilt>
+                            <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                            <div class="skill-ring" data-percent="85">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">85%</span>
                             </div>
+                            <h4>C++</h4>
                         </div>
-                        <div class="skill-item" data-tooltip="Python">
+                        <div class="skill-card" data-tilt>
                             <div class="skill-icon"><i class="fab fa-python"></i></div>
-                            <div class="skill-info">
-                                <span>Python</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="80"></div>
-                                    <span class="skill-percent">80%</span>
-                                </div>
+                            <div class="skill-ring" data-percent="80">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">80%</span>
                             </div>
+                            <h4>Python</h4>
                         </div>
-                        <div class="skill-item" data-tooltip="Java">
+                        <div class="skill-card" data-tilt>
                             <div class="skill-icon"><i class="fab fa-java"></i></div>
-                            <div class="skill-info">
-                                <span>Java</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="75"></div>
-                                    <span class="skill-percent">75%</span>
-                                </div>
+                            <div class="skill-ring" data-percent="75">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">75%</span>
                             </div>
+                            <h4>Java</h4>
                         </div>
                     </div>
                 </div>
-                
-                <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="category-title">Web Development</h3>
-                    <div class="skills-list">
-                        <div class="skill-item" data-tooltip="HTML">
+                <div class="skills-panel" id="panel-webdev">
+                    <div class="skills-grid">
+                        <div class="skill-card" data-tilt>
                             <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                            <div class="skill-info">
-                                <span>HTML</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="95"></div>
-                                    <span class="skill-percent">95%</span>
-                                </div>
+                            <div class="skill-ring" data-percent="95">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">95%</span>
                             </div>
+                            <h4>HTML5</h4>
                         </div>
-                        <div class="skill-item" data-tooltip="CSS">
+                        <div class="skill-card" data-tilt>
                             <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-                            <div class="skill-info">
-                                <span>CSS</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="95"></div>
-                                    <span class="skill-percent">95%</span>
-                                </div>
+                            <div class="skill-ring" data-percent="95">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">95%</span>
                             </div>
+                            <h4>CSS3</h4>
                         </div>
-                        <div class="skill-item" data-tooltip="MERN Stack">
+                        <div class="skill-card" data-tilt>
                             <div class="skill-icon"><i class="fab fa-react"></i></div>
-                            <div class="skill-info">
-                                <span>MERN Stack</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="88"></div>
-                                    <span class="skill-percent">88%</span>
-                                </div>
+                            <div class="skill-ring" data-percent="88">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">88%</span>
                             </div>
+                            <h4>MERN Stack</h4>
                         </div>
-                        <div class="skill-item" data-tooltip="Frontend Development">
-                            <div class="skill-icon"><i class="fas fa-desktop"></i></div>
-                            <div class="skill-info">
-                                <span>Frontend Development</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="90"></div>
-                                    <span class="skill-percent">90%</span>
-                                </div>
+                        <div class="skill-card" data-tilt>
+                            <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                            <div class="skill-ring" data-percent="90">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">90%</span>
                             </div>
+                            <h4>Frontend Dev</h4>
                         </div>
-                        <div class="skill-item" data-tooltip="Backend Development">
+                        <div class="skill-card" data-tilt>
                             <div class="skill-icon"><i class="fas fa-server"></i></div>
-                            <div class="skill-info">
-                                <span>Backend Development</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="85"></div>
-                                    <span class="skill-percent">85%</span>
-                                </div>
+                            <div class="skill-ring" data-percent="85">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">85%</span>
                             </div>
+                            <h4>Backend Dev</h4>
+                        </div>
+                        <div class="skill-card" data-tilt>
+                            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                            <div class="skill-ring" data-percent="85">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">85%</span>
+                            </div>
+                            <h4>Node.js</h4>
                         </div>
                     </div>
                 </div>
-                
-                <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="category-title">Professional Skills</h3>
-                    <div class="skills-list">
-                        <div class="skill-item" data-tooltip="Microsoft Word">
-                            <div class="skill-icon"><i class="fas fa-file-word"></i></div>
-                            <div class="skill-info">
-                                <span>Microsoft Word</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="90"></div>
-                                    <span class="skill-percent">90%</span>
-                                </div>
+                <div class="skills-panel" id="panel-tools">
+                    <div class="skills-grid">
+                        <div class="skill-card" data-tilt>
+                            <div class="skill-icon"><i class="fas fa-cube"></i></div>
+                            <div class="skill-ring" data-percent="88">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">88%</span>
                             </div>
+                            <h4>3D Modeling</h4>
                         </div>
-                        <div class="skill-item" data-tooltip="Microsoft PowerPoint">
-                            <div class="skill-icon"><i class="fas fa-file-powerpoint"></i></div>
-                            <div class="skill-info">
-                                <span>Microsoft PowerPoint</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="85"></div>
-                                    <span class="skill-percent">85%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-tooltip="Team Collaboration">
+                        <div class="skill-card" data-tilt>
                             <div class="skill-icon"><i class="fas fa-users"></i></div>
-                            <div class="skill-info">
-                                <span>Team Collaboration</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="92"></div>
-                                    <span class="skill-percent">92%</span>
-                                </div>
+                            <div class="skill-ring" data-percent="92">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">92%</span>
                             </div>
+                            <h4>Team Collaboration</h4>
                         </div>
-                        <div class="skill-item" data-tooltip="Leadership">
+                        <div class="skill-card" data-tilt>
                             <div class="skill-icon"><i class="fas fa-chess-king"></i></div>
-                            <div class="skill-info">
-                                <span>Leadership</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="88"></div>
-                                    <span class="skill-percent">88%</span>
-                                </div>
+                            <div class="skill-ring" data-percent="88">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">88%</span>
                             </div>
+                            <h4>Leadership</h4>
                         </div>
-                        <div class="skill-item" data-tooltip="Problem Solving">
-                            <div class="skill-icon"><i class="fas fa-puzzle-piece"></i></div>
-                            <div class="skill-info">
-                                <span>Problem Solving</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="90"></div>
-                                    <span class="skill-percent">90%</span>
-                                </div>
+                        <div class="skill-card" data-tilt>
+                            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                            <div class="skill-ring" data-percent="90">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">90%</span>
                             </div>
+                            <h4>Problem Solving</h4>
                         </div>
-                        <div class="skill-item" data-tooltip="Agile Methodologies">
-                            <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
-                            <div class="skill-info">
-                                <span>Agile Methodologies</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-percent="85"></div>
-                                    <span class="skill-percent">85%</span>
-                                </div>
+                        <div class="skill-card" data-tilt>
+                            <div class="skill-icon"><i class="fas fa-sync-alt"></i></div>
+                            <div class="skill-ring" data-percent="85">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">85%</span>
                             </div>
+                            <h4>Agile Methods</h4>
+                        </div>
+                        <div class="skill-card" data-tilt>
+                            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                            <div class="skill-ring" data-percent="85">
+                                <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" class="ring-bg"/><circle cx="60" cy="60" r="54" class="ring-fill"/></svg>
+                                <span class="ring-text">85%</span>
+                            </div>
+                            <h4>Git & GitHub</h4>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="skills-badge" data-aos="zoom-in" data-aos-delay="400">
-                <div class="badge-container">
-                    <div class="badge-outer-ring"></div>
-                    <div class="badge-inner-ring"></div>
-                    <i class="fas fa-star badge-icon"></i>
-                </div>
-                <div class="badge-tooltip">Advanced Proficiency</div>
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- work-experience.html -->
-<section id="work-experience" class="work-experience-section">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="title">Work Experience</h2>
-            <p class="subtitle">
-                A brief overview of my professional journey and hands-on experience in software development.
-            </p>
-        </div>
-
-        <!-- Experience Card -->
-        <div class="experience-card">
-            <div class="card-header">
-                <div>
-                    <h3 class="role">Web Development Intern</h3>
-                    <p class="company">Zidio Development Company</p>
-                </div>
-                <div class="details">
-                    <p class="date">
-                        <i class="fas fa-calendar-alt"></i> April 2025 - July 2025
-                    </p>
-                    <p class="location">
-                        <i class="fas fa-map-marker-alt"></i> Bengaluru, India (Remote)
-                    </p>
-                </div>
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;experience&gt;</span>
+                <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+                <p class="section-subtitle">My professional journey so far</p>
             </div>
-
-            <p class="description">
-                As a Web Development Intern, I gained hands-on experience in building and deploying full-stack applications. My role involved working on real-world projects, focusing on the entire software development lifecycle from concept to deployment. I collaborated with a team to develop solutions that address specific business challenges.
-            </p>
-
-            <div class="responsibilities-section">
-                <h4 class="responsibilities-title">Projects & Responsibilities</h4>
-                <ul class="responsibilities-list">
-                    <li>Developed and maintained multiple full-stack projects using the **MERN stack (MongoDB, Express.js, React, Node.js)**.</li>
-                    <li>Utilized React for building dynamic and responsive user interfaces, ensuring a smooth and intuitive user experience.</li>
-                    <li>Designed and implemented RESTful APIs with Node.js and Express.js to facilitate seamless data flow between the front-end and back-end.</li>
-                    <li>Managed database schemas and data operations using MongoDB, ensuring data integrity and efficient retrieval.</li>
-                    <li>Collaborated with team members in a remote environment, participating in daily stand-ups and code reviews.</li>
-                </ul>
-            </div>
-
-            <div class="skills-section">
-                <span class="skill-badge" data-skill="Web Development">
-                    <i class="fas fa-code"></i>
-                </span>
-                <span class="skill-badge" data-skill="MERN Stack">
-                    <i class="fas fa-database"></i>
-                </span>
-                <span class="skill-badge" data-skill="React.js">
-                    <i class="fab fa-react"></i>
-                </span>
-                <span class="skill-badge" data-skill="Node.js">
-                    <i class="fab fa-node-js"></i>
-                </span>
-                <span class="skill-badge" data-skill="Express.js">
-                    <i class="fas fa-server"></i>
-                </span>
-                <span class="skill-badge" data-skill="MongoDB">
-                    <i class="fas fa-leaf"></i>
-                </span>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Projects Section -->
-<section id="projects" class="section projects">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2 class="section-title">My <span>Projects</span></h2>
-            <p class="section-subtitle">Showcasing My Recent Creations</p>
-            <div class="section-divider">
-                <div class="divider-line" data-aos="fade-right" data-aos-delay="300"></div>
-                <div class="divider-icon" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-                <div class="divider-line" data-aos="fade-left" data-aos-delay="300"></div>
-            </div>
-        </div>
-        
-        <div class="projects-visual">
-            <div class="visual-bg">
-                <div class="bg-particle particle-1"></div>
-                <div class="bg-particle particle-2"></div>
-                <div class="bg-particle particle-3"></div>
-                <div class="bg-particle particle-4"></div>
-                <div class="bg-particle particle-5"></div>
-            </div>
-            
-            <div class="projects-grid grid">
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-image">
-                        <img src="animweb-technologies.png" alt="AnimWeb Technologies">
-                        <div class="project-overlay">
-                            <h3>AnimWeb Technologies</h3>
-                            <p>Live Web Development Company Site</p>
-                            <div class="project-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot">
+                        <div class="dot-pulse"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-icon"><i class="fas fa-building"></i></div>
+                            <div>
+                                <h3>Animweb Technologies</h3>
+                                <span class="timeline-role">Founder &amp; CEO</span>
                             </div>
+                            <span class="timeline-badge current">Current</span>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2024 - Present</span>
+                        <p class="timeline-desc">
+                            Leading the development of professional websites and digital solutions. Building the company's
+                            tech stack and managing client projects. Created AnimWeb Technologies company website and
+                            AwT Academy educational platform.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>3D Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-card-header">
+                            <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
+                            <div>
+                                <h3>Zidio Development</h3>
+                                <span class="timeline-role">Web Development Intern</span>
+                            </div>
+                            <span class="timeline-badge">Completed</span>
+                        </div>
+                        <span class="timeline-date"><i class="far fa-calendar-alt"></i> April 2025 - July 2025</span>
+                        <p class="timeline-desc">
+                            Developed full-stack applications using the MERN stack. Built dynamic React interfaces,
+                            designed RESTful APIs with Node.js/Express, managed MongoDB databases, and collaborated
+                            effectively in a remote team environment.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="certifications-wrapper">
+                <h3 class="sub-section-title"><i class="fas fa-certificate"></i> Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-card" data-tilt>
+                        <div class="cert-logo">
+                            <img src="assets/Meta front end.png" alt="Meta Front-End Developer Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h4>Meta Front-End Developer</h4>
+                            <span>Completed May 7, 2024</span>
+                        </div>
+                        <div class="cert-badge"><i class="fas fa-check-circle"></i></div>
+                    </div>
+                    <div class="cert-card" data-tilt>
+                        <div class="cert-logo">
+                            <img src="assets/Game development.png" alt="Game Design Certificate" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h4>Game Design: Art &amp; Concepts</h4>
+                            <span>CalArts &mdash; Completed April 1, 2024</span>
+                        </div>
+                        <div class="cert-badge"><i class="fas fa-check-circle"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">A selection of my recent work</p>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="fullstack" data-tilt>
+                    <div class="project-image">
+                        <img src="assets/animweb-technologies.png" alt="AnimWeb Technologies" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Pushpendra-Singh-Yadav" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>AnimWeb Technologies</h3>
-                        <p>A professional website for a web development company, showcasing services and a dynamic portfolio.</p>
-                        <div class="project-links">
-                            <a href="https://animweb-technologies.com/" class="btn btn-primary btn-small" target="_blank">
-                                <i class="fas fa-eye"></i> View Live
-                            </a>
+                        <p>Professional company website built with modern web technologies, featuring responsive design and smooth animations.</p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card" data-category="fullstack" data-tilt>
                     <div class="project-image">
-                        <img src="AwT-Academy.png" alt="AwT Academy">
+                        <img src="assets/AwT-Academy.png" alt="AwT Academy" class="project-img">
                         <div class="project-overlay">
-                            <h3>AwT Academy</h3>
-                            <p>Live Educational Platform</p>
-                            <div class="project-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                            </div>
+                            <a href="https://github.com/Pushpendra-Singh-Yadav" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>AwT Academy</h3>
-                        <p>An engaging platform offering courses in web development and programming.</p>
-                        <div class="project-links">
-                            <a href="https://animweb-technologies.com/courses" class="btn btn-primary btn-small" target="_blank">
-                                <i class="fas fa-eye"></i> View Live
-                            </a>
+                        <p>Educational platform for web development courses with interactive learning modules and progress tracking.</p>
+                        <div class="project-tech">
+                            <span>React</span><span>Node.js</span><span>MongoDB</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-card" data-category="frontend" data-tilt>
                     <div class="project-image">
-                        <img src="portfolio.png" alt="Personal Portfolio">
+                        <img src="assets/snacify.png" alt="Snacify" class="project-img">
                         <div class="project-overlay">
-                            <h3>Personal Portfolio</h3>
-                            <p>Responsive Portfolio Website</p>
-                            <div class="project-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Personal Portfolio</h3>
-                        <p>A responsive portfolio website highlighting my skills, projects, and achievements.</p>
-                        <div class="project-links">
-                            <a href="https://pushpendra-singh-yadav.netlify.app/" class="btn btn-primary btn-small" target="_blank">
-                                <i class="fas fa-eye"></i> View Live
-                            </a>
-                            <a href="https://github.com/Pushpendra-Singh-Yadav/Pushpendra-S-Yadav-Portfolio" class="btn btn-secondary btn-small" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-image">
-                        <img src="crazy-store.png" alt="Crazy Store">
-                        <div class="project-overlay">
-                            <h3>Crazy Store</h3>
-                            <p>Shirt Seller E-Commerce</p>
-                            <div class="project-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Crazy Store</h3>
-                        <p>A responsive e-commerce website for selling shirts, designed for user engagement.</p>
-                        <div class="project-links">
-                            <a href="https://crazie-store.netlify.app/" class="btn btn-primary btn-small" target="_blank">
-                                <i class="fas fa-eye"></i> View Live
-                            </a>
-                            <a href="https://github.com/Pushpendra-Singh-Yadav/crazy-store" class="btn btn-secondary btn-small" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="project-image">
-                        <img src="snacify.png" alt="Snacify">
-                        <div class="project-overlay">
-                            <h3>Snacify</h3>
-                            <p>Vending Machine Distributor</p>
-                            <div class="project-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                            </div>
+                            <a href="https://github.com/Pushpendra-Singh-Yadav/Snacify" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Snacify</h3>
-                        <p>A responsive website for a vending machine distributor, showcasing products and services.</p>
-                        <div class="project-links">
-                            <a href="https://snacify.netlify.app" class="btn btn-primary btn-small" target="_blank">
-                                <i class="fas fa-eye"></i> View Live
-                            </a>
-                            <a href="https://github.com/Pushpendra-Singh-Yadav/Snacify" class="btn btn-secondary btn-small" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a>
+                        <p>Vending machine distributor website with product catalog, modern UI design, and responsive layout.</p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="frontend" data-tilt>
+                    <div class="project-image">
+                        <img src="assets/crazy-store.png" alt="Crazy Store" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Pushpendra-Singh-Yadav/crazy-store" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Crazy Store</h3>
+                        <p>E-commerce website for shirt sales with product listings, cart functionality, and a clean shopping experience.</p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="frontend" data-tilt>
+                    <div class="project-image">
+                        <img src="assets/portfolio.png" alt="Personal Portfolio" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Pushpendra-Singh-Yadav" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Personal Portfolio</h3>
+                        <p>3D animated portfolio website with Three.js particle effects, GSAP animations, and immersive interactive design.</p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>Three.js</span><span>GSAP</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="projects-badge" data-aos="zoom-in" data-aos-delay="600">
-                <div class="badge-container">
-                    <div class="badge-outer-ring"></div>
-                    <div class="badge-inner-ring"></div>
-                    <i class="fas fa-rocket badge-icon"></i>
-                </div>
-                <div class="badge-tooltip">Innovative Creations</div>
-            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Certificates Section -->
-<section id="certificates" class="section certificates">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2 class="section-title">My <span>Certificates</span></h2>
-            <p class="section-subtitle">Achievements in Professional Learning</p>
-            <div class="section-divider">
-                <div class="divider-line" data-aos="fade-right" data-aos-delay="300"></div>
-                <div class="divider-icon" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fas fa-certificate"></i>
-                </div>
-                <div class="divider-line" data-aos="fade-left" data-aos-delay="300"></div>
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;education&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+                <p class="section-subtitle">Academic background and qualifications</p>
             </div>
-        </div>
-        
-        <div class="certificates-visual">
-            <div class="visual-bg">
-                <div class="bg-particle particle-1"></div>
-                <div class="bg-particle particle-2"></div>
-                <div class="bg-particle particle-3"></div>
-                <div class="bg-particle particle-4"></div>
-                <div class="bg-particle particle-5"></div>
-            </div>
-            
-            <div class="certificates-grid grid">
-                <div class="certificate-card" data-aos="fade-up" data-aos-delay="100" data-cert-id="meta-frontend">
-                    <div class="certificate-image">
-                        <img src="Meta front end.png" alt="Meta Front-End Developer">
-                        <div class="certificate-overlay">
-                            <h3>Meta Front-End Developer</h3>
-                            <p>Course by Meta on Coursera</p>
+            <div class="education-grid">
+                <div class="edu-card" data-tilt>
+                    <div class="edu-year">2023 - 2027</div>
+                    <div class="edu-content">
+                        <div class="edu-icon">
+                            <img src="assets/CU-logo.png" alt="Chitkara University" class="edu-logo-img">
                         </div>
-                    </div>
-                    <div class="certificate-info">
-                        <h3>Meta Front-End Developer</h3>
-                        <p>Completed: May 7, 2024</p>
-                        <button class="btn btn-primary btn-small view-cert-btn" data-cert-id="meta-frontend">View Details</button>
-                    </div>
-                </div>
-                
-                <div class="certificate-card" data-aos="fade-up" data-aos-delay="200" data-cert-id="javascript">
-                    <div class="certificate-image">
-                        <img src="Game development.png" alt="JavaScript Mastery">
-                        <div class="certificate-overlay">
-                            <h3>Game Design: Art and Concepts</h3>
-                            <p>Course by Cal Arts on Coursera</p>
-                        </div>
-                    </div>
-                    <div class="certificate-info">
-                        <h3>Game Design: Art and Concepts</h3>
-                        <p>Completed: Apr 1, 2024</p>
-                        <button class="btn btn-primary btn-small view-cert-btn" data-cert-id="Game Design: Art and Concepts">View Details</button>
+                        <h3>B.Tech Computer Science Engineering</h3>
+                        <h4>Chitkara University, Rajpura, Punjab</h4>
+                        <p>Currently in 5th Semester. Specializing in Full Stack Development, Data Structures, and Software Engineering.</p>
+                        <span class="edu-badge">Currently Pursuing</span>
                     </div>
                 </div>
-            </div>
-            
-            <div class="certificate-badge" data-aos="zoom-in" data-aos-delay="500">
-                <div class="badge-container">
-                    <div class="badge-outer-ring"></div>
-                    <div class="badge-inner-ring"></div>
-                    <i class="fas fa-award badge-icon"></i>
+                <div class="edu-card" data-tilt>
+                    <div class="edu-year">2021 - 2023</div>
+                    <div class="edu-content">
+                        <div class="edu-icon"><i class="fas fa-school"></i></div>
+                        <h3>Higher Secondary (12th)</h3>
+                        <h4>Guru Nanak Khalsa Sr. Sec. School, Chandigarh</h4>
+                        <p>Science Stream (PCM) &mdash; Score: 62.4%. Foundation in Mathematics, Physics, and Computer Science.</p>
+                        <span class="edu-badge">Completed</span>
+                    </div>
                 </div>
-                <div class="badge-tooltip">Certified Excellence</div>
+                <div class="edu-card" data-tilt>
+                    <div class="edu-year">2019 - 2021</div>
+                    <div class="edu-content">
+                        <div class="edu-icon"><i class="fas fa-book-reader"></i></div>
+                        <h3>Secondary (10th)</h3>
+                        <h4>Shivalik Public School, Chandigarh</h4>
+                        <p>Score: 72%. Strong foundation in core subjects with early interest in technology and computer science.</p>
+                        <span class="edu-badge">Completed</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    
-    <!-- Certificate Modal -->
-    <div class="certificate-modal" id="certificate-modal">
-        <div class="modal-content">
-            <span class="modal-close">×</span>
-            <div class="modal-details">
-                <h3 id="modal-title"></h3>
-                <p id="modal-issuer"></p>
-                <p id="modal-date"></p>
-                <p id="modal-description"></p>
-                <a href="#" id="modal-link" class="btn btn-primary" target="_blank">View Certificate</a>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="section contact">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2 class="section-title">Contact <span>Me</span></h2>
-            <p class="section-subtitle">Let's Connect and Create</p>
-            <div class="section-divider">
-                <div class="divider-line" data-aos="fade-right" data-aos-delay="300"></div>
-                <div class="divider-icon" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fas fa-envelope-open-text"></i>
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-subtitle">Let's build something amazing together</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Let's Talk</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+                    <div class="contact-cards">
+                        <a href="mailto:pushpendra2005sy@gmail.com" class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="contact-card-label">Email</span>
+                                <span class="contact-card-value">pushpendra2005sy@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+919465265663" class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <span class="contact-card-label">Phone</span>
+                                <span class="contact-card-value">+91 9465265663</span>
+                            </div>
+                        </a>
+                        <div class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <span class="contact-card-label">Location</span>
+                                <span class="contact-card-value">Mohali/Rajpura, Punjab, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/Pushpendra-Singh-Yadav" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/pushpendra-s-yadav" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:pushpendra2005sy@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
-                <div class="divider-line" data-aos="fade-left" data-aos-delay="300"></div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required autocomplete="name">
+                        <label for="name">Your Name</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                        <label for="email">Your Email</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <label for="message">Your Message</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
             </div>
         </div>
-        
-        <div class="contact-visual">
-            <div class="visual-bg">
-                <div class="bg-particle particle-1"></div>
-                <div class="bg-particle particle-2"></div>
-                <div class="bg-particle particle-3"></div>
-                <div class="bg-particle particle-4"></div>
-                <div class="bg-particle particle-5"></div>
-            </div>
-            
-            <div class="contact-content grid">
-                <div class="contact-info" data-aos="fade-right">
-                    <h3>Ready to Collaborate?</h3>
-                    <p>Reach out for projects, opportunities, or just a friendly chat!</p>
-                    
-                    <div class="info-item" data-aos="fade-right" data-aos-delay="100">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                            <div class="icon-ring"></div>
-                        </div>
-                        <div class="info-content">
-                            <h4>Email</h4>
-                            <p><a href="mailto:pushpendra2005sy@gmail.com">pushpendra2005sy@gmail.com</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item" data-aos="fade-right" data-aos-delay="200">
-                        <div class="info-icon">
-                            <i class="fas fa-phone"></i>
-                            <div class="icon-ring"></div>
-                        </div>
-                        <div class="info-content">
-                            <h4>Phone</h4>
-                            <p><a href="tel:+919465265663">+91 9465265663</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item" data-aos="fade-right" data-aos-delay="300">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="icon-ring"></div>
-                        </div>
-                        <div class="info-content">
-                            <h4>Location</h4>
-                            <p>Mohali, Punjab, India</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form" data-aos="fade-left">
-                    <form action="#" method="POST" name="contact-form" data-netlify="true" data-netlify-honeypot="bot-field">
-                        <input type="hidden" name="form-name" value="contact-form">
-                        <p hidden><input name="bot-field"></p>
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                            <span class="input-glow"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
-                            <span class="input-glow"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject">
-                            <span class="input-glow"></span>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" required></textarea>
-                            <span class="input-glow"></span>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="contact-badge" data-aos="zoom-in" data-aos-delay="400">
-                <div class="badge-container">
-                    <div class="badge-outer-ring"></div>
-                    <div class="badge-inner-ring"></div>
-                    <i class="fas fa-comments badge-icon"></i>
-                </div>
-                <div class="badge-tooltip">Let's Talk!</div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-visual">
-            <div class="visual-bg">
-                <div class="bg-particle particle-1"></div>
-                <div class="bg-particle particle-2"></div>
-                <div class="bg-particle particle-3"></div>
-                <div class="bg-particle particle-4"></div>
-                <div class="bg-particle particle-5"></div>
-            </div>
-            
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
             <div class="footer-content">
-                <div class="footer-logo" data-aos="fade-up">
-                    <a href="#home" class="logo">PSY<span>.</span></a>
-                    <p class="logo-subtitle">Web Developer & Innovator</p>
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">Pushpendra</span>
+                    <span class="logo-bracket">/&gt;</span>
                 </div>
-                
-                <div class="footer-bio" data-aos="fade-up" data-aos-delay="100">
-                    <h3>About Me</h3>
-                    <p>I'm Pushpendra Singh Yadav, a passionate web developer specializing in crafting dynamic, responsive, and user-centric websites using HTML, CSS, JavaScript, and the MERN stack. Let's build something extraordinary together!</p>
+                <p class="footer-text">Designed & Built by Pushpendra Singh Yadav</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/Pushpendra-Singh-Yadav" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/pushpendra-s-yadav" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:pushpendra2005sy@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
-                
-                <div class="footer-contact" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Contact Info</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:pushpendra2005sy@gmail.com" class="contact-link">pushpendra2005sy@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+919465265663">+91 94652 65663</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Mohali, Punjab, India</span>
-                    </div>
-                </div>
-                
-                <div class="footer-social" data-aos="fade-up" data-aos-delay="400">
-                    <h3>Follow Me</h3>
-                    <div class="social-links">
-                        <a href="www.linkedin.com/in/pushpendra-s-yadav" aria-label="LinkedIn" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                            <span class="social-glow"></span>
-                        </a>
-                        <a href="https://github.com/Pushpendra-Singh-Yadav" aria-label="GitHub" target="_blank">
-                            <i class="fab fa-github"></i>
-                            <span class="social-glow"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom" data-aos="fade-up" data-aos-delay="500">
-                <p>© 2025 Pushpendra Singh Yadav. All Rights Reserved.</p>
-            </div>
-            
-            <div class="footer-badge" data-aos="zoom-in" data-aos-delay="600">
-                <div class="badge-container">
-                    <div class="badge-outer-ring"></div>
-                    <div class="badge-inner-ring"></div>
-                    <i class="fas fa-bolt badge-icon"></i>
-                </div>
+                <p class="footer-copy">&copy; 2024-2026 Pushpendra Singh Yadav. All rights reserved.</p>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+
     <!-- Scripts -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

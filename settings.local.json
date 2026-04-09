@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -s \"https://api.github.com/users/Pushpendra-Singh-Yadav/repos?per_page=30&sort=updated\")",
+      "Bash(python3 -c ':*)",
+      "WebFetch(domain:www.pushpendra-singh-yadav.info)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
